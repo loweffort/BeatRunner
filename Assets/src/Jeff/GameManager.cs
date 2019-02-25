@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         // Postion of PlayerScore and Shape type
         GUI.Label(new Rect(Screen.width / 2 - 150 - 12, 20, 100, 100), "" + PlayerScore);
 
-        // SendMessahe call is a f(x) to trigger any f(x) that matches the name that
+        // SendMessage call is a f(x) to trigger any f(x) that matches the name that
         // is set in the class.So, if the Player hits my menu button I want to send a signal
         // to the Menu Function to execute DisplayMenu, for now I am just seeing if we 
         // can just reset the game with score and ensure Menu Manager and Game Manager can communicate
