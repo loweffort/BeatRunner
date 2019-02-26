@@ -6,8 +6,9 @@ public class Obstacles : MonoBehaviour
 {
 
     public int RandomNumber(){  
-    Random random = new Random();  
-    return random.Next(1, 4);  
+    //Random random = new Random();  
+    //return random.Next(1, 4); 
+    return 1;  
 }  
     // Start is called before the first frame update
     void Start()
