@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
         if (wallID == "Good_Obstacles")
             PlayerScore = PlayerScore + 50;
         // When the Character hits the wall will have the game put up the InGameMenu
-        else if (wallID == "Bad_Obstacles")
-            theMenu.SendMessage("DisplayInGameMenu", 0.5f, SendMessageOptions.RequireReceiver);
+        //else if (wallID == "Bad_Obstacles")
+            //theMenu.SendMessage("DisplayInGameMenu", 0.5f, SendMessageOptions.RequireReceiver);
     
     }
     private void OnGUI()
