@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/src/Irven/Menu.unity
+    guid: 5454c5cbfa440da47b243faba1b224d2
+  - enabled: 1
+    path: Assets/src/Scenes/BaseScene.unity
+    guid: 5561f3152ed0fc04297a13908b34dd6a
   m_configObjects: {}

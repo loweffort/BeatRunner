@@ -12,7 +12,6 @@ public class SoundManager : MonoBehaviour
     {
         musicSource = GetComponent<AudioSource>();
         song = musicSource.clip;
-        Debug.Log(musicSource);
         //Add in other audio sources here
         //Also need the ability to choose music through menu (currently just has one song)
         SongDuration = song.length;

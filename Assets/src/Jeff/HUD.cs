@@ -40,7 +40,7 @@ public class HUD : SoundManager
     {
         GUI.skin = layout;
         // Postion of PlayerScore and Shape type
-        GUI.Label(new Rect(Screen.width / 2 - 300 - 12, 20, 100, 100), "" + PlayerScore);
+        GUI.Label(new Rect(80 - 12, 20, 100, 100), "" + PlayerScore);
 
         // SendMessahe call is a f(x) to trigger any f(x) that matches the name that
         // is set in the class.So, if the Player hits my menu button I want to send a signal
