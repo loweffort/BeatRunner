@@ -34,18 +34,18 @@ public class character_move : MonoBehaviour
             goingLeft = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 5.6)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 25, 0);
         }
 
         if (goingLeft && transform.position.x > -45)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(-20, GetComponent<Rigidbody>().velocity.y, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else if(goingRight && transform.position.x < 45)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(20, GetComponent<Rigidbody>().velocity.y, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else
         {
