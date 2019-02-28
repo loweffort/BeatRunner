@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e88a06e51411c4c8765e908b30ddb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 2070647715}
+  hud: {fileID: 1961010584}
 --- !u!1 &1136319949
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +591,7 @@ MonoBehaviour:
   TimeElapsed: 0
   SongDuration: 0
   layout: {fileID: 11400000, guid: 2afe6440f093d3e4eb626de9c8621e63, type: 2}
+  theGameManager: {fileID: 521189591}
 --- !u!4 &1961010585
 Transform:
   m_ObjectHideFlags: 0

@@ -5,12 +5,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public SoundManager soundManager;
+    public HUD hud;
     // Start is called before the first frame update
     void Start()
     {
-        SoundManager paddle1 = Instantiate(soundManager) as SoundManager;
     }
 
+    private void RestartGame()
+    {
+        soundManager.StopMusic();
+        soundManager.BeginMusic();
+    }
     // Update is called once per frame
     void Update()
     {
