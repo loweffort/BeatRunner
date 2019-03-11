@@ -33,7 +33,7 @@ public class SoundManager : MonoBehaviour
         musicSource.UnPause();
         //unpause time in here also
     }
-    private void BeginMusic()
+    public void BeginMusic()
     {
         musicSource.Play(0);
     }
