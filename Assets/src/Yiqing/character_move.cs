@@ -7,6 +7,7 @@ public class character_move : MonoBehaviour
 {
     bool goingLeft = false;
     bool goingRight = false;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -37,19 +38,19 @@ public class character_move : MonoBehaviour
 
         if (goingLeft && transform.position.x > -45)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
+            player.GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else if(goingRight && transform.position.x < 45)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
+            player.GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
+            player.GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
         }
 
-        GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
-        GetComponent<Rigidbody>().AddForce(0, -200, 0);
+        player.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
+        player.GetComponent<Rigidbody>().AddForce(0, -200, 0);
     }
 
 }

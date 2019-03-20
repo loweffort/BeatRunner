@@ -5,8 +5,8 @@ using UnityEngine;
 public class camera_follower : MonoBehaviour
 {
     public GameObject player;
+	//public Transform player;
     private Vector3 offset;
-
     void Start()
     {
         offset = transform.position - player.transform.position;
