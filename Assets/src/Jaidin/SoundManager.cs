@@ -19,8 +19,10 @@ public class SoundManager : MonoBehaviour
 
     public float[] AnalyzeSong(AudioSource song)
     {
+#pragma warning disable CS0618 // Type or member is obsolete
         float[] samples = song.GetOutputData(1024, 1);
-        //more analysis done here
+#pragma warning restore CS0618 // Type or member is obsolete
+                              //more analysis done here
         return samples;
     }
     public void PauseMusic()

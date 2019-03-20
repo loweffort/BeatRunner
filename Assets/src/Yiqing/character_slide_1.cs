@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class character_slide_1 : MonoBehaviour
 {
-	float slide_angle;
-    bool slide_up=false;
+    float slide_angle;
+    bool slide_up = false;
 
     void Start()
     {
@@ -20,17 +20,17 @@ public class character_slide_1 : MonoBehaviour
             slide_up = true;
         }
 
-        if(slide_up == true)
+        if (slide_up == true)
         {
             slide_angle = -45;
-            GetComponent<Rigidbody>().rotation = Quaternion.Euler(slide_angle,0,0);           
+            GetComponent<Rigidbody>().rotation = Quaternion.Euler(slide_angle, 0, 0);
         }
 
-        if(Input.GetKeyUp(KeyCode.W) && slide_up == true)
+        if (Input.GetKeyUp(KeyCode.W) && slide_up == true)
         {
-            slide_up = false; 
+            slide_up = false;
             slide_angle = 0;
-            GetComponent<Rigidbody>().rotation = Quaternion.Euler(slide_angle,0,0); 
+            GetComponent<Rigidbody>().rotation = Quaternion.Euler(slide_angle, 0, 0);
         }
     }
 }

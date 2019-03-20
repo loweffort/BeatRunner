@@ -1,5 +1,4 @@
-﻿//Character move left or right
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +6,6 @@ public class character_move : MonoBehaviour
 {
     bool goingLeft = false;
     bool goingRight = false;
-    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -36,21 +34,25 @@ public class character_move : MonoBehaviour
             goingLeft = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 5.6)
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 25, 0);
+        }
+
         if (goingLeft && transform.position.x > -45)
         {
-            player.GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else if(goingRight && transform.position.x < 45)
         {
-            player.GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
         }
         else
         {
-            player.GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
         }
 
-        player.GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
-        player.GetComponent<Rigidbody>().AddForce(0, -200, 0);
+        GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
+        GetComponent<Rigidbody>().AddForce(0, -200, 0);
     }
-
 }
