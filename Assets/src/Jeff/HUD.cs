@@ -53,12 +53,12 @@ public class HUD : SoundManager
         // is set in the class.So, if the Player hits my menu button I want to send a signal
         // to the Menu Function to execute DisplayMenu, for now I am just seeing if we 
         // can just reset the game with score and ensure Menu Manager and Game Manager can communicate
-        if (GUI.Button(new Rect(Screen.width - 180, 5, 120, 15), "Menu"))
+        if (GUI.Button(new Rect(Screen.width - 125, 20, 120, 15), "Menu"))
         {
-            GUI.Label(new Rect(Screen.width - 180, 40, 120, 15), "Menu Not Working Yet");
+            GUI.Label(new Rect(Screen.width - 90, 20, 100, 15), "Menu Not Working Yet");
         }
 
-        if (GUI.Button(new Rect(Screen.width - 180, 20, 120, 20), "Restart"))
+        if (GUI.Button(new Rect(Screen.width - 125, 35, 120, 15), "Restart"))
         {
             // Player Score Returns to 0
             PlayerScore = 0;
