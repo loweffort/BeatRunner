@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HUD : SoundManager
 {
@@ -23,6 +24,12 @@ public class HUD : SoundManager
         // This causes my Class to look for the Character.
         //theChar = GameObject.FindGameObjectWithTag("Character");
         
+    }
+
+    public void ResetScore()
+    {
+        PlayerScore = 0;
+        Multiplier = 1;
     }
 
     void CollisionSifter(Collision collision)
@@ -55,7 +62,11 @@ public class HUD : SoundManager
         // can just reset the game with score and ensure Menu Manager and Game Manager can communicate
         if (GUI.Button(new Rect(Screen.width - 125, 20, 120, 15), "Menu"))
         {
-            GUI.Label(new Rect(Screen.width - 90, 20, 100, 15), "Menu Not Working Yet");
+            //GUI.Label(new Rect(Screen.width - 90, 20, 100, 15), "Menu Not Working Yet");
+            PlayerScore = 0;
+            // This will send the RestartGame function to the Game Manager, I forgot who controls this.
+            theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
+            SceneManager.LoadScene(sceneName: "Menu");
         }
 
         if (GUI.Button(new Rect(Screen.width - 125, 35, 120, 15), "Restart"))

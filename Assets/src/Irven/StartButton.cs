@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    public void startGame()
     {
-        if(Input.GetMouseButtonUp(0))
-            SceneManager.LoadScene(sceneName: "BaseScene");
+        Debug.Log("starting");
+        SceneManager.LoadScene(sceneName: "BaseScene");
     }
 }

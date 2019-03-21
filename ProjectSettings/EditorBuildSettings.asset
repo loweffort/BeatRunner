@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/src/Scenes/BaseScene.unity
     guid: 5561f3152ed0fc04297a13908b34dd6a
+  - enabled: 1
+    path: Assets/src/Aaron/LightSpeedTest.unity
+    guid: fcfa2665a76e7844d868b8034c38df35
+  - enabled: 1
+    path: Assets/src/Aaron/TestSelect.unity
+    guid: 2a7e470dd370dd44fbab429d5d5e7c94
   m_configObjects: {}

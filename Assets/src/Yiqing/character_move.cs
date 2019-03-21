@@ -13,6 +13,11 @@ public class character_move : MonoBehaviour
         
     }
 
+    public void ResetVelocity()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+    }
+
     // Update is called once per frame
     void Update()
     {
