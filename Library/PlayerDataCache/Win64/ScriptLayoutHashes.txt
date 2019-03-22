@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/quick/Documents/Aaron/Classes/CS 383/BeatRunner/Runs/Beat Runner.exe
+C:/Users/Craw/Documents/GitHub/BeatRunner/Runs/Beat Runner.exe
 SceneListBegin?
 Assets/src/Irven/Menu.unity
 Assets/src/Scenes/BaseScene.unity
@@ -10,11 +10,10 @@ SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 0b2cd3146a93888267b45ea01f5c8e4a Assembly-CSharp.dll:.hit_obstacle
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
-0f671122ad279015c8efbcab073d3f98 Assembly-CSharp.dll:.GameManagerLightSpeedTest
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -96,8 +95,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 1028c39545bcfa841aaab54121e69a47 Assembly-CSharp.dll:.SliderX
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
-8747051d8c53856e2def93af4f2a8b08 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
-c5d8c2663a1fd929fe8160c755998615 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
+780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
+bfe92276ffffff8b72df49ef40f0c1ea UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationTrack
 1b3bcc00907f1f74e346e850f93a79c2 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioPlayableAsset
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.AudioTrack
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.BasicPlayableBehaviour
@@ -138,7 +137,6 @@ dd7520b7d4e690e8c593273e7b9fbe80 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEven
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_move
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 86b48115546340441b00cc45fca0877f Assembly-CSharp.dll:.character_slide_2
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TestButton
 3375c3d749f8f4cad889721b431bdc27 Assembly-CSharp.dll:TMPro.Examples.CameraController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_slide
 e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
@@ -209,9 +207,11 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 0784d4fd5b93bd75440d01eb2fac4233 Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitButton
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_turn
 34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HUD
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VelocityOverflowButton
+0f671122ad279015c8efbcab073d3f98 Assembly-CSharp.dll:.GameManagerLightSpeedTest
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BackButton
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TestButton
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VelocityOverflowButton
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitButton
