@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slide_speed: 30
-  slide_timer: 0
+  slide_timer: 1
   player: {fileID: 2102771880}
 --- !u!114 &1136319957
 MonoBehaviour:
@@ -2098,7 +2098,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070647714}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 685c92618370e8a40a3d5f0485802b16, type: 3}
