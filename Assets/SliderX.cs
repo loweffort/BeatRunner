@@ -8,7 +8,7 @@ public class SliderX : MonoBehaviour
 {
     private float timeRemaining;
     // 10f = 10 sec, 5f = 5 sec etc
-    private const float timerMax = 200f;
+    private const float timerMax = 20f;
     public Slider slider;
 
 
@@ -16,12 +16,8 @@ public class SliderX : MonoBehaviour
     void Update()
     {
         slider.value = CalculateSliderValue();
+        timeRemaining = timerMax;
         
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            timeRemaining = timerMax;
-        }
-
         if(timeRemaining <= 0)
         {
             timeRemaining = 0;
