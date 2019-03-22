@@ -1,21 +1,18 @@
-﻿using System.Collections;
+﻿//Character move left or right
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class character_move : MonoBehaviour
+public class character_move_1 : MonoBehaviour
 {
     bool goingLeft = false;
     bool goingRight = false;
+    //public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    public void ResetVelocity()
-    {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
@@ -39,11 +36,6 @@ public class character_move : MonoBehaviour
             goingLeft = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 5.6)
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 25, 0);
-        }
-
         if (goingLeft && transform.position.x > -45)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
@@ -60,4 +52,5 @@ public class character_move : MonoBehaviour
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
         GetComponent<Rigidbody>().AddForce(0, -200, 0);
     }
+
 }

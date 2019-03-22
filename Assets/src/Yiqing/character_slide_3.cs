@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class character_slide_2 : MonoBehaviour
+public class character_slide_3 : MonoBehaviour
 {
     [SerializeField]
-    float slide_speed, slide_timer;
+    float slide_speed;
+    [SerializeField]
+    float slide_timer;
     float slide_angle;
     public Transform player;
 
-    [SerializeField]
     bool slide_up;
 
     // Start is called before the first frame update

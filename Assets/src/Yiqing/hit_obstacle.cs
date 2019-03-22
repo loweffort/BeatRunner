@@ -6,26 +6,40 @@ public class hit_obstacle : MonoBehaviour
 {
     public GameManager theGameManager;
     // Start is called before the first frame update
-    GameObject[] endgame;
+    //GameObject[] endgame;
+    public Transform player;
+    //public float turnSpeed = 90f;
+    bool hit = false;
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "barObstacle")
+        {        
+            Debug.Log("Collision and ROTATION");
+            hit = true;
+            //Destroy(gameObject);
+            //theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
+
+        }
+
+    }
+
     void Start()
     {
 
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.name == "barObstacle")
-        {
-            Debug.Log("Collision with " + other.gameObject.name);
-            Destroy(gameObject);
-            //theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
-
-        }
-    }
 
     // Update is called once per frame
-    void Update()
+    /*void FixedUpdate()
     {
-
-    }
+    	if(hit == true)
+    	{
+    		//player.transform.Rotate( -Vector3.forward, turnSpeed * Time.deltaTime);
+    		player.rotation = Quaternion.Euler(0,90,-45);
+    		hit = false;
+    	}
+    	
+    }*/
 }
+
