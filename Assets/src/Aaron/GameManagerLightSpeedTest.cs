@@ -18,7 +18,7 @@ public class GameManagerLightSpeedTest : MonoBehaviour
     }
 
     private void RestartGame()
-    {
+     {
         barObstacle.transform.position = new Vector3(0, 6, 850);
         barObstacle.transform.rotation = new Quaternion (0, 0, 0, 1);
         playerCharacter.transform.position = new Vector3(0, 6, 4);
@@ -42,5 +42,5 @@ public class GameManagerLightSpeedTest : MonoBehaviour
         {
             barObstacle.transform.position = new Vector3(0, 6, 850);
         }
-    }
+   }
 }

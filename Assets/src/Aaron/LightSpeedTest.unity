@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundManager: {fileID: 2070647715}
-  hud: {fileID: 0}
+  hud: {fileID: 1961010584}
   barObstacle: {fileID: 1478208650}
   playerCharacter: {fileID: 1136319956}
 --- !u!114 &521189592
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundManager: {fileID: 2070647715}
-  hud: {fileID: 0}
+  hud: {fileID: 1961010584}
   barObstacle: {fileID: 1478208650}
   playerCharacter: {fileID: 1136319956}
 --- !u!1 &548428639
