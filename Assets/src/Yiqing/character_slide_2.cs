@@ -5,8 +5,7 @@ using UnityEngine;
 public class character_slide_2 : MonoBehaviour
 {
     [SerializeField]
-    float slide_speed = 3;
-    float slide_timer;
+    float slide_speed, slide_timer;
     float slide_angle;
     public Transform player;
 
