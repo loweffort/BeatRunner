@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/src/Irven/Menu.unity
+- path: Assets/src/Aaron/LightSpeedTest.unity
   isLoaded: 1
   isActive: 1
