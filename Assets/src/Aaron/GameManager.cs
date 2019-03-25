@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     {
         barObstacle.transform.position = new Vector3(0, 6, 850);
         barObstacle.transform.rotation = new Quaternion (0, 0, 0, 1);
-        playerCharacter.transform.position = new Vector3(0, 6, 4);
+        playerCharacter.transform.position = new Vector3(22, 2, 80); //must be the same as the starting position
         playerCharacter.transform.rotation = new Quaternion(0, 0, 0, 1);
-        playerCharacter.SendMessage("ResetVelocity", 0.5f, SendMessageOptions.RequireReceiver);
+        playerCharacter.SendMessage("ResetYVelocity", 0.5f, SendMessageOptions.RequireReceiver);
         hud.SendMessage("ResetScore", 0.5f, SendMessageOptions.RequireReceiver);
         soundManager.StopMusic();
         soundManager.BeginMusic();

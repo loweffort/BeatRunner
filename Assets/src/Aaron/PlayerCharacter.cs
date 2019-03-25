@@ -21,7 +21,10 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    
+    public void ResetYVelocity()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, 0);
+    }
 
     // Update is called once per frame
     void Update()
