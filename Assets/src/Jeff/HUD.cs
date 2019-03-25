@@ -7,6 +7,7 @@ public class HUD : SoundManager
 {
     // Player Score Variable
     public static int PlayerScore = 0;
+    int TestInc = 0;
     public static int Multiplier = 1;
     // Later to be fed in by the Music Manager
     public GUISkin layout;
@@ -29,7 +30,8 @@ public class HUD : SoundManager
     public void ResetScore()
     {
         PlayerScore = 0;
-        Multiplier = 1;
+        Multiplier = TestInc + 5000000;
+        TestInc = Multiplier;
     }
 
     void CollisionSifter(Collision collision)
@@ -85,18 +87,47 @@ public class HUD : SoundManager
         // This is where I need to figure out how to A. Display when to say winner, send to a f(x)
         // for high score comparisons, for now I will just see if we can get the score and song seconds
         // to match in order to trigger my desired functions
-        if (PlayerScore == SongDuration)
+        //if (PlayerScore == SongDuration)
+        //{
+        //     GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "Wow, You are Fast!");
+        //}
+
+        if (TestInc > 1)
         {
-            GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "Wow, You are Fast!");
+            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Passing");
         }
+        else if(TestInc == -1)
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Passed");
+        }
+        else if (TestInc == -2)
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Failed");
+        }
+
+            if (PlayerScore >= 999999999)
+        {
+            PlayerScore = 0;
+            Multiplier = 1;
+            TestInc = -1;
+
+        }
+
+        else if (PlayerScore > 1000000000 || PlayerScore <= -1)
+        { 
+            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Failed");
+            TestInc = -2;
+
+        }
+
+        
 
     }
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer % 60 == 0);
+        if (timer % 60 == 0) ;
             PlayerScore += Multiplier;
-        
     }
 }
