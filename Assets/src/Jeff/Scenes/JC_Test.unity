@@ -2004,6 +2004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961010585}
   - component: {fileID: 1961010584}
+  - component: {fileID: 1961010586}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -2018,7 +2019,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961010583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f0ff7f1f3ca6449876a3b23cf6ccec, type: 3}
   m_Name: 
@@ -2042,6 +2043,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961010586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961010583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98215efaf4309ac4b9699917b7abeb43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeElapsed: 0
+  SongDuration: 0
+  layout: {fileID: 11400000, guid: 2afe6440f093d3e4eb626de9c8621e63, type: 2}
+  theGameManager: {fileID: 521189591}
 --- !u!1 &2070647714
 GameObject:
   m_ObjectHideFlags: 0

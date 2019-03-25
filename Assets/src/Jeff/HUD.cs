@@ -30,8 +30,9 @@ public class HUD : SoundManager
     public void ResetScore()
     {
         PlayerScore = 0;
-        Multiplier = TestInc + 5000000;
-        TestInc = Multiplier;
+        Multiplier = 1;
+        //Multiplier = TestInc + 5000000;
+        //TestInc = Multiplier;
     }
 
     void CollisionSifter(Collision collision)
@@ -92,35 +93,10 @@ public class HUD : SoundManager
         //     GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "Wow, You are Fast!");
         //}
 
-        if (TestInc > 1)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Passing");
-        }
-        else if(TestInc == -1)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Passed");
-        }
-        else if (TestInc == -2)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Failed");
-        }
-
-            if (PlayerScore >= 999999999)
-        {
-            PlayerScore = 0;
-            Multiplier = 1;
-            TestInc = -1;
-
-        }
-
-        else if (PlayerScore > 1000000000 || PlayerScore <= -1)
-        { 
-            GUI.Label(new Rect(Screen.width / 2 - 175, 200, 2000, 1000), "Test Failed");
-            TestInc = -2;
-
-        }
 
         
+
+
 
     }
     // Update is called once per frame
@@ -129,5 +105,7 @@ public class HUD : SoundManager
         timer += Time.deltaTime;
         if (timer % 60 == 0) ;
             PlayerScore += Multiplier;
+    
+        
     }
 }
