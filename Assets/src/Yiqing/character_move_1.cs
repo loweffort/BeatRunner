@@ -39,10 +39,12 @@ public class character_move_1 : MonoBehaviour
         if (goingLeft && transform.position.x > -10)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
+            Debug.Log("Left movement sucess");
         }
         else if(goingRight && transform.position.x < 50)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
+            Debug.Log("Right movement sucess");
         }
         else
         {

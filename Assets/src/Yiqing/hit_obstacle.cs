@@ -9,6 +9,10 @@ public class hit_obstacle : MonoBehaviour
     //GameObject[] endgame;
     public Transform player;
     //public float turnSpeed = 90f;
+
+    string myLog;
+    Queue myLogQueue = new Queue();
+
     bool hit = false;
 
     void OnCollisionEnter(Collision other)
@@ -29,6 +33,10 @@ public class hit_obstacle : MonoBehaviour
 
     }
 
+    void Update()
+    {
+
+    }
 
     // Update is called once per frame
     /*void FixedUpdate()
@@ -41,5 +49,34 @@ public class hit_obstacle : MonoBehaviour
     	}
     	
     }*/
+
+
+    void OnEnable () {
+         Application.logMessageReceived += HandleLog;
+     }
+     
+    void OnDisable () {
+         Application.logMessageReceived -= HandleLog;
+     }
+ 
+    void HandleLog(string logString, string stackTrace, LogType type){
+         myLog = logString;
+         string newString = "\n [" + type + "] : " + myLog;
+         myLogQueue.Enqueue(newString);
+         if (type == LogType.Exception)
+         {
+             newString = "\n" + stackTrace;
+             myLogQueue.Enqueue(newString);
+         }
+         myLog = string.Empty;
+         foreach(string mylog in myLogQueue){
+             myLog += mylog;
+         }
+     }
+ 
+     void OnGUI () {
+         GUILayout.Label(myLog);
+     }
+ 
 }
 

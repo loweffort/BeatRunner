@@ -16,6 +16,7 @@ public class character_slide_3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class character_slide_3 : MonoBehaviour
             if (slide_angle >= 0)
                 slide_timer = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.S) && player.transform.rotation.x > 90 || slide_angle > -90 && !slide_up)
+        else if (Input.GetKeyDown(KeyCode.S) && player.transform.rotation.x > 90 && player.transform.position.y < 6 || slide_angle > -90 && !slide_up)
         {
             slide_angle -= slide_speed * Time.deltaTime;
             slide_timer -= Time.deltaTime;
@@ -37,10 +38,11 @@ public class character_slide_3 : MonoBehaviour
         else if (slide_angle < 0)
             slide_angle += slide_speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && player.transform.position.y < 6)
         {
             slide_up = false;
             slide_timer = 2;
+            Debug.Log("Slide sucess");
         }
         player.transform.rotation = Quaternion.Euler(slide_angle, 0, 0);
 
