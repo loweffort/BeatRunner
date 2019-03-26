@@ -10,18 +10,18 @@ public class SoundManager : MonoBehaviour
     public float SongDuration;
     void Start()
     {
-        musicSource = GetComponent<AudioSource>();
+        AudioSource[] sources = GetComponents<AudioSource>();
+        musicSource = sources[0];
         song = musicSource.clip;
         //Add in other audio sources here
         //Also need the ability to choose music through menu (currently just has one song)
         SongDuration = song.length;
+        collisionSource = sources[1];
     }
 
     public float[] AnalyzeSong(AudioSource song)
     {
-#pragma warning disable CS0618 // Type or member is obsolete
         float[] samples = song.GetOutputData(numSamples: 1024, channel: 1);
-#pragma warning restore CS0618 // Type or member is obsolete
                               //more analysis done here
         return samples;
     }
@@ -43,6 +43,10 @@ public class SoundManager : MonoBehaviour
     public void StopMusic()
     {
         musicSource.Stop();
+    }
+
+    public void SoundOnCollision(){
+        collisionSource.Play(0);
     }
     // Update is called once per frame
     void Update()
