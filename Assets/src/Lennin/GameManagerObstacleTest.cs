@@ -18,37 +18,17 @@ public class GameManagerObstacleTest : MonoBehaviour
     void Start()
     {
           bars[0] = (BarObstacle)Instantiate(masterBar, new Vector3(0, 6, 850), new Quaternion (0, 0, 0, 1));  
-        
-    //     BarObstacle bar = bars[];
-
-    //      int x = 5;
-    //     for ( int j = 0; j < 1000; j++){
-    //         spawnPositions[j] = new Vector3(-3, x, 0 );
-    //         x-=2;
-    // }
-
-
-    //        Quaternion spawnRotation = Quaternion.identity;
-
-    //        for (int i = 1; i < 1000; i++){
-    //            Instantiate(bar, spawnPositions[i], spawnRotation);
-    //         }
-
-    //     prevTime = (int)Time.time;
-    //     barObstacle.name = "barObstacle";
     }
 
     private void RestartGame()
      {
         bars[0].transform.position = new Vector3(0, 6, 850);
         bars[0].transform.rotation = new Quaternion (0, 0, 0, 1);
-        // soundManager.StopMusic();
-        // soundManager.BeginMusic();
     }
 
     private void OnGUI(){
         if( testFail ){
-         GUI.Label(new Rect(80 - 12, 20, 100, 100), "Test failed at " + increment + " obstacles.");
+         GUI.Label(new Rect(80 - 12, 100, 50, 50), "Test failed at " + increment + " obstacles.");
         }
     }
 

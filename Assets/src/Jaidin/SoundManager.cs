@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
         //Add in other audio sources here
         //Also need the ability to choose music through menu (currently just has one song)
         SongDuration = song.length;
-        collisionSource = sources[1];
+        //collisionSource = sources[1];
     }
 
     public float[] AnalyzeSong(AudioSource song)
@@ -46,7 +46,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void SoundOnCollision(){
-        collisionSource.Play(0);
+       // collisionSource.Play(0);
     }
     // Update is called once per frame
     void Update()

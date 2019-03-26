@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/src/Aaron/LightSpeedTest.unity
+- path: Assets/src/Aaron/TestSelect.unity
   isLoaded: 1
   isActive: 1
