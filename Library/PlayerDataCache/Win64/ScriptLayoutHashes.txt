@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Craw/Documents/GitHub/BeatRunner/Beat Runner.exe
+C:/Users/quick/Documents/Aaron/Classes/CS 383/BeatRunner/Runs/Beat Runner.exe
 SceneListBegin?
 Assets/src/Irven/Menu.unity
 Assets/src/Aaron/LightSpeedTest.unity
@@ -181,6 +181,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StartButton
+34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HUDTest
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
@@ -205,6 +206,7 @@ bd3f0ca738703903e759f77536ed74fd Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameR
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
 e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TestButtonMenu
 e80c1450883443c68d6c2dade213536f Assembly-CSharp.dll:TMPro.Examples.TMPro_InstructionOverlay
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_jump_1
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.TeleType
@@ -216,4 +218,5 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitButton
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HUD
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TestButtonJC
+c81edf5d0bc7829f1a21bb11ceee6c89 Assembly-CSharp.dll:.GameManagerObstacleTest
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.characterMoveVelocityTest
