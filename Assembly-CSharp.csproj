@@ -189,6 +189,7 @@
     <Compile Include="Assets\RotateTrack.cs" />
     <Compile Include="Assets\Scroller.cs" />
     <Compile Include="Assets\SliderX.cs" />
+    <Compile Include="Assets\src\Aaron\AvyTestButton.cs" />
     <Compile Include="Assets\src\Aaron\BackButton.cs" />
     <Compile Include="Assets\src\Aaron\characterMoveVelocityTest.cs" />
     <Compile Include="Assets\src\Aaron\GameManager.cs" />
