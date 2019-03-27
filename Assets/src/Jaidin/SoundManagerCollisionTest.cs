@@ -8,36 +8,38 @@ public class SoundManagerCollisionTest : MonoBehaviour
     public BarObstacle barObstacle;
     public PlayerCharacter playerCharacter;
     bool testFail = false;
-
-    int obstacleFrequency = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        barObstacle.name = "barObstacle";
-    }
-
-    private void OnGUI()
-    {
+    bool testPass = false;
+    int soundFrequency = 1;
+    void Start(){}
+    private void OnGUI(){
         if (testFail)
         {
-            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at obstacle rate of: " + obstacleFrequency + "/s");
+            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at sound rate of: " + soundFrequency + "/s");
+        }
+        if (testPass)
+        {
+            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test passed, reaching 1000 sounds/second");
+
         }
     }
+     void Update(){
 
-    // private void RestartGame()
-    //  {
-    //     //each time I restart, increase obstacles/second by 1; repeat until test failure
-    //     barObstacle.transform.position = new Vector3(0, 6, 850);
-    //     barObstacle.transform.rotation = new Quaternion (0, 0, 0, 1);
-    //     playerCharacter.transform.position = new Vector3(22, 2, 80);
-    //     playerCharacter.transform.rotation = new Quaternion(0, 0, 0, 1);
-    //     hud.SendMessage("ResetScore", 0.5f, SendMessageOptions.RequireReceiver);
-    //     soundManager.StopMusic();
-    //     soundManager.BeginMusic();
-    // }
-    // Update is called once per frame
-    void Update()
-    {
-      //Placeholder for test
+        if(testFail || testPass){
+            yield return new WaitForSeconds(5);
+            Application.Quit();
+        }
+
+        if(!testFail && !testPass){
+            soundFrequency++;
+            for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++){
+                soundManager.SoundOnCollision();
+            }
+            if(!soundManager.collisionSource.isPlaying){ //checks for sound playing immediately after starting to play the required sounds
+                testFail = true;
+            }
+        }
+        if(soundFrequency > 1000 && !testFail){
+            testPass = true;
+        }
    }
 }
