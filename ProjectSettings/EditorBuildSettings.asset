@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/src/Jeff/Scenes/JC_Test.unity
     guid: b5d967c633f6d4d41ac2f378749745cf
+  - enabled: 1
+    path: Assets/src/Jeff/Scenes/JC_PlayGround.unity
+    guid: 5071494b2f783b54e8a64a028d92deaa
   m_configObjects: {}

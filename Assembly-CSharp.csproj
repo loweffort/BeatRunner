@@ -193,6 +193,7 @@
     <Compile Include="Assets\src\Aaron\characterMoveVelocityTest.cs" />
     <Compile Include="Assets\src\Aaron\GameManager.cs" />
     <Compile Include="Assets\src\Aaron\GameManagerLightSpeedTest.cs" />
+    <Compile Include="Assets\src\Aaron\HSTB.cs" />
     <Compile Include="Assets\src\Aaron\ObstacleFrameTest.cs" />
     <Compile Include="Assets\src\Aaron\PlayerCharacter.cs" />
     <Compile Include="Assets\src\Aaron\QuitButton.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Assets\src\Irven\StartButton.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManager.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManagerCollisionTest.cs" />
+    <Compile Include="Assets\src\Jeff\HSHUD.cs" />
     <Compile Include="Assets\src\Jeff\HUD.cs" />
     <Compile Include="Assets\src\Lennin\BarObstacle.cs" />
     <Compile Include="Assets\src\Lennin\GameManagerObstacleTest.cs" />
@@ -276,19 +278,19 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\src\Aaron\A File.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -492,22 +494,22 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.10f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Assets/PubNub/ThirdParty/BouncyCastle.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Assets/PubNub/ThirdParty/BouncyCastle.dll</HintPath>
     </Reference>
     <Reference Include="JsonFx.Json">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Assets/PubNub/ThirdParty/JsonFx.Json.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Assets/PubNub/ThirdParty/JsonFx.Json.dll</HintPath>
     </Reference>
     <Reference Include="MarkerMetro.Unity.WinLegacy">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Assets/PubNub/ThirdParty/MarkerMetro.Unity.WinLegacy.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Assets/PubNub/ThirdParty/MarkerMetro.Unity.WinLegacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Jcraw/Documents/GitHubTest/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Jcraw/Documents/GitHub/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
