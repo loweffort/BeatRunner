@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{E75697AB-FBDE-3195-3EE2-72A9A1AFF4C6}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/src/Irven/Toolbar.cs">
+    <Files>
+      <File FileName="Assets/src/Irven/Toolbar.cs" Line="5" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

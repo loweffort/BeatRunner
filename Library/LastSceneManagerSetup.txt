@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/src/Jeff/Scenes/JC_PlayGround.unity
+- path: Assets/src/Scenes/BaseScene.unity
   isLoaded: 1
   isActive: 1
