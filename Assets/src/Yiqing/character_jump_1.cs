@@ -14,7 +14,7 @@ public class character_jump_1 : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Space) && transform.position.y < 6) // < 5.6
         {

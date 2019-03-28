@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Jcraw/Documents/GitHub/IrvenSubMenu/Beat Runner.exe
+C:/Users/Jcraw/Documents/GitHub/MovemmentTest/Beat Runner.exe
 SceneListBegin?
 Assets/src/Irven/Menu.unity
 Assets/src/Aaron/LightSpeedTest.unity
