@@ -8,6 +8,7 @@ Assets/src/Aaron/TestSelect.unity
 Assets/src/Scenes/BaseScene.unity
 Assets/src/Jeff/Scenes/JC_Test.unity
 Assets/src/Jeff/Scenes/JC_PlayGround.unity
+Assets/src/Jeff/Scenes/Testing.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_move_1
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:PubNubExample.Example
@@ -132,6 +133,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HSHUD
 4d16cfbaa8e821a2b370e80844a0e9bc Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -176,6 +178,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HSTB
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
 62fef86270a167c41a606cfca1ecc156 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
@@ -229,5 +232,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HUD
 08e7d6a290a8a7bfa3500c72bcbb3d48 Assembly-CSharp.dll:.leaderBoard
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HSTB
-34e8bea894419389951c38f764a7cfe7 Assembly-CSharp.dll:.HSHUD
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AvyTestButton
