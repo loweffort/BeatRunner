@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E75697AB-FBDE-3195-3EE2-72A9A1AFF4C6}</ProjectGuid>
+    <ProjectGuid>{0F7BCEDF-4EA0-3841-637E-57DE9E256C8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -207,7 +207,6 @@
     <Compile Include="Assets\src\Irven\StartHidden.cs" />
     <Compile Include="Assets\src\Irven\Toolbar.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManager.cs" />
-    <Compile Include="Assets\src\Jaidin\SoundManagerCollisionTest.cs" />
     <Compile Include="Assets\src\Jeff\HSHUD.cs" />
     <Compile Include="Assets\src\Jeff\HUD.cs" />
     <Compile Include="Assets\src\Lennin\BarObstacle.cs" />
@@ -284,19 +283,19 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\src\Aaron\A File.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -503,22 +502,22 @@
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.9f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="MarkerMetro.Unity.WinLegacy">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Assets/PubNub/ThirdParty/MarkerMetro.Unity.WinLegacy.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Assets/PubNub/ThirdParty/MarkerMetro.Unity.WinLegacy.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Assets/PubNub/ThirdParty/BouncyCastle.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Assets/PubNub/ThirdParty/BouncyCastle.dll</HintPath>
     </Reference>
     <Reference Include="JsonFx.Json">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Assets/PubNub/ThirdParty/JsonFx.Json.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Assets/PubNub/ThirdParty/JsonFx.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/irven/Documents/LowEffortGaming/BeatRunner 1.12.00 AM/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2018.3.9f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
