@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Debree1.cs" />
+    <Compile Include="Assets\Debree2.cs" />
+    <Compile Include="Assets\Debree3.cs" />
     <Compile Include="Assets\HUDTest.cs" />
     <Compile Include="Assets\Leader_Board.cs" />
     <Compile Include="Assets\Loader.cs" />
