@@ -9,7 +9,7 @@ public class Debree1 : MonoBehaviour
     // Attach these in the Inspector window
     private int m_XValue = 180;
     private int m_YValue = 0;
-    private int m_ZValue = 650;
+    private int m_ZValue = 950;
 
     // Use this for initialization
     void Start()
