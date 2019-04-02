@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//jump movement
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class character_jump_1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 6) // < 5.6
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 6) // input jump and the character height < 5.6
         {
             initJump = true;
         }
@@ -20,7 +21,7 @@ public class character_jump_1 : MonoBehaviour
     {
         if (initJump)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);//jump height
             initJump = false;
         }
     }
