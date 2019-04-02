@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void SetObstacles()
     {
-        switch (Random.Range(0, 2))
+        switch (Random.Range(0, 3))
         {
             case (0):
                 obstacles[0] = (GameObject)Instantiate(masterWall, new Vector3(33, 18, 850), new Quaternion(0, 0, 0, 1));
