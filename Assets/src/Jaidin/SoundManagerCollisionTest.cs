@@ -24,22 +24,22 @@ public class SoundManagerCollisionTest : MonoBehaviour
     }
      void Update(){
 
-        if(testFail || testPass){
-            yield return new WaitForSeconds(5);
-            Application.Quit();
-        }
+        // if(testFail || testPass){
+        //     yield return new WaitForSeconds(5);
+        //     Application.Quit();
+        // }
 
-        if(!testFail && !testPass){
-            soundFrequency++;
-            for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++){
-                soundManager.SoundOnCollision();
-            }
-            if(!soundManager.collisionSource.isPlaying){ //checks for sound playing immediately after starting to play the required sounds
-                testFail = true;
-            }
-        }
-        if(soundFrequency > 1000 && !testFail){
-            testPass = true;
-        }
+        // if(!testFail && !testPass){
+        //     soundFrequency++;
+        //     // for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++){
+        //     //     soundManager.SoundOnCollision();
+        //     // }
+        //     if(!soundManager.collisionSource.isPlaying){ //checks for sound playing immediately after starting to play the required sounds
+        //         testFail = true;
+        //     }
+        // }
+        // if(soundFrequency > 1000 && !testFail){
+        //     testPass = true;
+        // }
    }
 }
