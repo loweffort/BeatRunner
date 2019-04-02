@@ -1,14 +1,14 @@
 Win64
 PlayerPath?
-C:/Users/Jcraw/Documents/GitHub/MovemmentTest/Beat Runner.exe
+C:/Users/quick/Documents/Aaron/Classes/CS 383/BeatRunner/Runs/Beat Runner.exe
 SceneListBegin?
 Assets/src/Irven/Menu.unity
 Assets/src/Aaron/LightSpeedTest.unity
 Assets/src/Aaron/TestSelect.unity
-Assets/src/Scenes/BaseScene.unity
 Assets/src/Jeff/Scenes/JC_Test.unity
 Assets/src/Jeff/Scenes/JC_PlayGround.unity
 Assets/src/Jeff/Scenes/Testing.unity
+Assets/src/Scenes/BaseScene.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.character_move_1
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:PubNubExample.Example
@@ -118,7 +118,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 c81edf5d0bc7829f1a21bb11ceee6c89 Assembly-CSharp.dll:.GameManagerObstacleTest
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
-8a598873d070d2afbf1c6a80d80a50f8 Assembly-CSharp.dll:.SoundManager
+366a824566bd218ab9e08310c265f673 Assembly-CSharp.dll:.SoundManager
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -134,7 +134,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-bcd5dcd1618169aca8c4853145bc35e0 Assembly-CSharp.dll:.HSHUD
+01fdbb387c3e3cd5b5f70705e94178c1 Assembly-CSharp.dll:.HSHUD
 4d16cfbaa8e821a2b370e80844a0e9bc Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -144,9 +144,10 @@ dd7520b7d4e690e8c593273e7b9fbe80 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEven
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 0769963ca05483a9f7e743b9118b3fba Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 47930f3b40e24ef5b3b5e3d9ada7097a Assembly-CSharp.dll:TMPro.Examples.Benchmark01
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Debree1
 f112e7c78e40458cadbce74ef64a279b Assembly-CSharp.dll:.DiplayInstruction
 5d064456c40f7c34690dc0c9d079accc Assembly-CSharp.dll:.RotateTrack
-0f671122ad279015c8efbcab073d3f98 Assembly-CSharp.dll:.GameManager
+4fe2f46169b744960980bad803529969 Assembly-CSharp.dll:.GameManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:PubNubAPI.PNLatencyManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BarObstacle
 2654d3e8c935ebdae63ce3396645f4bb Assembly-CSharp.dll:.Toolbar
@@ -197,7 +198,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StartButton
-bcd5dcd1618169aca8c4853145bc35e0 Assembly-CSharp.dll:.HUDTest
+01fdbb387c3e3cd5b5f70705e94178c1 Assembly-CSharp.dll:.HUDTest
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
@@ -205,12 +206,14 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 ca1c9695bbafcb52af6a07f1bd4c4ea5 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
 bd3f0ca738703903e759f77536ed74fd Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Debree2
 a1ca1237bad0f30ea5ba8f4060929114 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 9f54e90afea28775ebea5ef289593867 Assembly-CSharp.dll:.OptionButton
 0b2cd3146a93888267b45ea01f5c8e4a Assembly-CSharp.dll:.PlayerCharacter
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AvyTestButton
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Debree3
 27e5341178f188b89bdc6495710b590c Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
 8a874a8207a7664bdf44e61f28717254 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -236,5 +239,7 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitButton
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-bcd5dcd1618169aca8c4853145bc35e0 Assembly-CSharp.dll:.HUD
+01fdbb387c3e3cd5b5f70705e94178c1 Assembly-CSharp.dll:.HUD
 08e7d6a290a8a7bfa3500c72bcbb3d48 Assembly-CSharp.dll:.leaderBoard
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Obstacle
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.WallObstacle

@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class character_jump_1 : MonoBehaviour
 {
+    bool initJump = false;
     //public Transform player;
     // Start is called before the first frame update
-    
-    void Start()
+
+    void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 6) // < 5.6
+        {
+            initJump = true;
+        }
     }
 
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && transform.position.y < 6) // < 5.6
+        if (initJump)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 30, 0);
-            Debug.Log("Jump sucess");
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);
+            initJump = false;
         }
-        
     }
 
 }

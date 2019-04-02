@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
+    public GameManager gameManager;
     public static SoundManager instance = null;
     private AudioSource musicSource;
     private AudioClip song;
@@ -71,6 +72,7 @@ public class SoundManager : MonoBehaviour
         {
             TimeElapsed = 0;
             BeginMusic();
+            gameManager.SendMessage("WonGame", 0.5f, SendMessageOptions.RequireReceiver);
         }
     }
 }

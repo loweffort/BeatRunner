@@ -54,7 +54,7 @@ public class character_move_1 : MonoBehaviour
         }
 
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
-        GetComponent<Rigidbody>().AddForce(0, -200, 0);
+        GetComponent<Rigidbody>().AddForce(0, -800, 0);
         }
     
 
