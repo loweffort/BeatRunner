@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public GameManager theGameManager;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameManager theGameManager = GameManager.Instance;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -24,11 +18,5 @@ public class PlayerCharacter : MonoBehaviour
     public void ResetYVelocity()
     {
         GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, 0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

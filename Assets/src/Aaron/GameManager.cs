@@ -11,6 +11,30 @@ public class GameManager : MonoBehaviour
     public GameObject masterBar;
     public GameObject masterWall;
     public GameObject[] obstacles = new GameObject[3];
+
+    //begin singleton code
+    private static GameManager gameManagerInstance = null;
+    private static readonly object padlock = new object();
+    private GameManager() { }
+
+    public static GameManager Instance
+    {
+        get {
+            if(gameManagerInstance != null)
+            {
+                return gameManagerInstance;
+            }
+            lock(padlock)
+            {
+                if(gameManagerInstance == null)
+                {
+                    gameManagerInstance = new GameManager();
+                }
+                return gameManagerInstance;
+            }
+        }
+    }
+    //end singleton code
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +49,16 @@ public class GameManager : MonoBehaviour
             case (0):
                 obstacles[0] = (GameObject)Instantiate(masterWall, new Vector3(33, 18, 850), new Quaternion(0, 0, 0, 1));
                 obstacles[1] = (GameObject)Instantiate(masterBar, new Vector3(0, 6, 850), new Quaternion(0, 0, 0, 1));
-                obstacles[2] = (GameObject)Instantiate(masterBar, new Vector3(-33, 6, 850), new Quaternion(0, 0, 0, 1));
+                obstacles[2] = (GameObject)Instantiate(masterWall, new Vector3(-33, 18, 850), new Quaternion(0, 0, 0, 1));
                 break;
             case (1):
-                obstacles[0] = (GameObject)Instantiate(masterBar, new Vector3(33, 6, 850), new Quaternion(0, 0, 0, 1));
+                obstacles[0] = (GameObject)Instantiate(masterWall, new Vector3(33, 18, 850), new Quaternion(0, 0, 0, 1));
                 obstacles[1] = (GameObject)Instantiate(masterWall, new Vector3(0, 18, 850), new Quaternion(0, 0, 0, 1));
                 obstacles[2] = (GameObject)Instantiate(masterBar, new Vector3(-33, 6, 850), new Quaternion(0, 0, 0, 1));
                 break;
             case (2):
                 obstacles[0] = (GameObject)Instantiate(masterBar, new Vector3(33, 6, 850), new Quaternion(0, 0, 0, 1));
-                obstacles[1] = (GameObject)Instantiate(masterBar, new Vector3(0, 6, 850), new Quaternion(0, 0, 0, 1));
+                obstacles[1] = (GameObject)Instantiate(masterWall, new Vector3(0, 18, 850), new Quaternion(0, 0, 0, 1));
                 obstacles[2] = (GameObject)Instantiate(masterWall, new Vector3(-33, 18, 850), new Quaternion(0, 0, 0, 1));
                 break;
         }
@@ -82,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            obstacles[i].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -400);
+            obstacles[i].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -500);
             obstacles[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
         }
 
