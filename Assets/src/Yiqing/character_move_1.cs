@@ -35,7 +35,9 @@ public class character_move_1 : MonoBehaviour
         {
             goingLeft = false;
         }
-
+    }
+        void FixedUpdate()
+        { 
         if (goingLeft && transform.position.x > -10)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
@@ -53,6 +55,7 @@ public class character_move_1 : MonoBehaviour
 
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
         GetComponent<Rigidbody>().AddForce(0, -200, 0);
-    }
+        }
+    
 
 }

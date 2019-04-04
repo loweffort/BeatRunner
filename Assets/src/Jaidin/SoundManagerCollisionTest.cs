@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class SoundManagerCollisionTest : MonoBehaviour
 {
     public SoundManager soundManager;
@@ -11,7 +12,9 @@ public class SoundManagerCollisionTest : MonoBehaviour
     bool testPass = false;
     int soundFrequency = 1;
     void Start(){}
-    private void OnGUI(){
+
+    void OnGUI()
+    {
         if (testFail)
         {
             GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at sound rate of: " + soundFrequency + "/s");
@@ -22,24 +25,30 @@ public class SoundManagerCollisionTest : MonoBehaviour
 
         }
     }
-     void Update(){
 
-        // if(testFail || testPass){
-        //     yield return new WaitForSeconds(5);
-        //     Application.Quit();
-        // }
+    private IEnumerator Update()
+    { 
+        if(testFail || testPass)
+        {
+            yield return new WaitForSeconds(5);
+            Application.Quit();
+        }
 
-        // if(!testFail && !testPass){
-        //     soundFrequency++;
-        //     // for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++){
-        //     //     soundManager.SoundOnCollision();
-        //     // }
-        //     if(!soundManager.collisionSource.isPlaying){ //checks for sound playing immediately after starting to play the required sounds
-        //         testFail = true;
-        //     }
-        // }
-        // if(soundFrequency > 1000 && !testFail){
-        //     testPass = true;
-        // }
-   }
+        if(!testFail && !testPass)
+        {
+            soundFrequency++;
+            for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++)
+            {
+                soundManager.SoundOnCollision();
+            }
+            if(!soundManager.collisionSource.isPlaying)
+            { //checks for sound playing immediately after starting to play the required sounds
+                testFail = true;
+            }
+        }
+        if(soundFrequency > 1000 && !testFail)
+        {
+            testPass = true;
+        }
+    }
 }

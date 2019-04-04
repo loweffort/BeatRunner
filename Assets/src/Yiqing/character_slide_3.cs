@@ -20,7 +20,7 @@ public class character_slide_3 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (slide_up && slide_angle < 0)
         {
