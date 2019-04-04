@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//slide movement on x direction for crab
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ public class character_slide_3 : MonoBehaviour
             if (slide_angle >= 0)
                 slide_timer = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.S) && player.transform.rotation.x > 90 && player.transform.position.y < 6 || slide_angle > -90 && !slide_up)
+        else if (Input.GetKeyDown(KeyCode.S) && player.transform.rotation.x > 90 && player.transform.position.y < 6 || slide_angle > -90 && !slide_up)//get input and up boundary of ground
         {
             slide_angle -= slide_speed * Time.deltaTime;
             slide_timer -= Time.deltaTime;
@@ -38,11 +39,11 @@ public class character_slide_3 : MonoBehaviour
         else if (slide_angle < 0)
             slide_angle += slide_speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.S) && player.transform.position.y < 6)
+        if (Input.GetKeyDown(KeyCode.S) && player.transform.position.y < 6)// make sure when jump cannot slide
         {
             slide_up = false;
             slide_timer = 2;
-            Debug.Log("Slide sucess");
+            //Debug.Log("Slide sucess");
         }
         player.transform.rotation = Quaternion.Euler(slide_angle, 0, 0);
 

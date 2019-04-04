@@ -28,7 +28,7 @@ public class TrackMover : MonoBehaviour
         // Change the position depending on the vector m_ZValue beleow is speed, Bigger Negative number means faster
         transform.position = m_NewPosition;
         if (m_ZValue >= 0)
-            m_ZValue = m_ZValue -10;
+            m_ZValue = m_ZValue -15;
         else
             m_ZValue = 450;
         

@@ -15,7 +15,7 @@ public class PlayerCharacter : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Collision with "+ collision.gameObject.name);
-        if(collision.gameObject.name == "barObstacle")
+        if(collision.gameObject.name == "badObstacle")
         {
             theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
         }

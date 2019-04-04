@@ -18,7 +18,7 @@ public class character_move_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D)) //movement input
         {
             goingRight = true;
         }
@@ -40,21 +40,23 @@ public class character_move_1 : MonoBehaviour
         { 
         if (goingLeft && transform.position.x > -10)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0);
-            Debug.Log("Left movement sucess");
+            GetComponent<Rigidbody>().velocity = new Vector3(-30, GetComponent<Rigidbody>().velocity.y, 0); 
+            //Debug.Log("Left movement sucess");
         }
         else if(goingRight && transform.position.x < 50)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(30, GetComponent<Rigidbody>().velocity.y, 0);
-            Debug.Log("Right movement sucess");
+           // Debug.Log("Right movement sucess");
         }
         else
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
+            // not move without input or hit boundary
         }
 
+        //add force to move
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
-        GetComponent<Rigidbody>().AddForce(0, -200, 0);
+        GetComponent<Rigidbody>().AddForce(0, -800, 0);
         }
     
 

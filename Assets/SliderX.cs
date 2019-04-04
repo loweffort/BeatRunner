@@ -6,9 +6,9 @@ using System;
 
 public class SliderX : MonoBehaviour
 {
-    private float timeRemaining = 20f;
+    private float timeRemaining = 0.0f;
     // 10f = 10 sec, 5f = 5 sec etc
-    private const float timerMax = 20f;
+    private const float timerMax = 20.0f;
     public Slider slider;
 
     // Update is called once per frame
@@ -17,20 +17,20 @@ public class SliderX : MonoBehaviour
             slider.value = CalculateSliderValue();
             timeRemaining = timerMax;
 
-            if (timeRemaining <= 0)
-            {
-                timeRemaining = 0;
-            }
-            else if (timeRemaining > 0)
-            {
-                timeRemaining -= Time.deltaTime;
-
-
-            }
+        if (timeRemaining <= 0.0f)
+        {
+            timeRemaining = 0.0f;
+        }
+        else if(timeRemaining > 0.0f)
+        {
+            //timeRemaining -= Time.deltaTime;
+            timeRemaining = timeRemaining-0.5f;
+        }
     }
 
     float CalculateSliderValue()
     {
+        
         return (timeRemaining / timerMax);
     }
 }

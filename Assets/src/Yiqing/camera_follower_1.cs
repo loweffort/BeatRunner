@@ -8,6 +8,8 @@ public class camera_follower_1 : MonoBehaviour
     public GameObject player;
 	//public Transform player;
     private Vector3 offset;
+    //camera is follow the character
+
     void Start()
     {
         offset = transform.position - player.transform.position;

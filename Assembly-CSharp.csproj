@@ -215,7 +215,9 @@
     <Compile Include="Assets\src\Jeff\HUD.cs" />
     <Compile Include="Assets\src\Lennin\BarObstacle.cs" />
     <Compile Include="Assets\src\Lennin\GameManagerObstacleTest.cs" />
+    <Compile Include="Assets\src\Lennin\Obstacle.cs" />
     <Compile Include="Assets\src\Lennin\Obstacles.cs" />
+    <Compile Include="Assets\src\Lennin\WallObstacle.cs" />
     <Compile Include="Assets\src\Yiqing\camera_follower_1.cs" />
     <Compile Include="Assets\src\Yiqing\character_jump_1.cs" />
     <Compile Include="Assets\src\Yiqing\character_move_1.cs" />

@@ -7,8 +7,8 @@ public class Debree3 : MonoBehaviour
     Vector3 m_NewPosition;
 
     // Attach these in the Inspector window
-    private int m_XValue = 250;
-    private int m_YValue = 40;
+    private int m_XValue = 750;
+    private int m_YValue = 55;
     private int m_ZValue = 50;
 
     // Use this for initialization

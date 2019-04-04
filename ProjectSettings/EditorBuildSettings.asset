@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/src/Aaron/TestSelect.unity
     guid: 2a7e470dd370dd44fbab429d5d5e7c94
   - enabled: 1
-    path: Assets/src/Scenes/BaseScene.unity
-    guid: 0664c047055d9a64185f076ae625221f
-  - enabled: 1
     path: Assets/src/Jeff/Scenes/JC_Test.unity
     guid: b5d967c633f6d4d41ac2f378749745cf
   - enabled: 1
@@ -26,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/src/Jeff/Scenes/Testing.unity
     guid: 52ef7ad610064cf488972ab68efeed5c
+  - enabled: 1
+    path: Assets/src/Scenes/BaseScene.unity
+    guid: a719e9b5fc11f7e47a5df2e0e0cab181
+  - enabled: 1
+    path: Assets/src/Aaron/GameWonMenu.unity
+    guid: 5c992fb5ffc83d747913187e843b28a7
   m_configObjects: {}
