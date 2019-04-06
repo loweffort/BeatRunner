@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class character_jump_1 : MonoBehaviour
 {
+	//private boolen
     bool initJump = false;
-    //public Transform player;
+    //Transform player;
+
     // Start is called before the first frame update
+
 
     void Update()
     {

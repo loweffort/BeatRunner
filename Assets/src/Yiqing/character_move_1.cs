@@ -1,13 +1,33 @@
-﻿//Character move left or right
+//Character move left or right
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class character_move_1 : MonoBehaviour
 {
+    //private boolen
     bool goingLeft = false;
     bool goingRight = false;
     //public Transform player;
+
+    //initailize the singleton instance
+    //public static character_move_1 Instance = null;
+    static internal character_move_1 Instance = null; 
+    // Initialize the singleton instance.
+    private void Awake()
+    {
+        // If there is not already an instance of character_move_1, set it to this.
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        //If an instance already exists, destroy whatever this object is to enforce the singleton.
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 
     // Start is called before the first frame update
     void Start()
