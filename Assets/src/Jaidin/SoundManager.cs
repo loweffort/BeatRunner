@@ -73,6 +73,8 @@ public class SoundManager : MonoBehaviour
             TimeElapsed = 0;
             BeginMusic();
             gameManager.SendMessage("WonGame", 0.5f, SendMessageOptions.RequireReceiver);
+            // Having the SoundMGR send the signal to save the score to Server.
+            //HUD.SendMessage("SaveHS", 0.5f, SendMessageOptions.RequireReceiver);
         }
     }
 }
