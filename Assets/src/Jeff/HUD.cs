@@ -8,7 +8,6 @@ public class HUD : SoundManager
     // Player Score Variable
     public static int PlayerScore = 0;
     int TestInc = 0;
-    int HScore = 0;
     public static int Multiplier = 1;
     // Later to be fed in by the Music Manager
     public GUISkin layout;
@@ -30,12 +29,28 @@ public class HUD : SoundManager
 
     public void ResetScore()
     {
-        HScore = PlayerScore;
+        FHScore = PlayerScore;
         PlayerScore = 0;
         Multiplier = 1;
         //Multiplier = TestInc + 5000000;
         //TestInc = Multiplier;
     }
+
+    //Singleton
+    private new static HUD instance = null;
+        public static HUD SharedInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new HUD();
+                }
+                return instance;
+            }
+        }
+    public float FHScore;
+    //Singleton   
 
     public void SaveHS()
     {
