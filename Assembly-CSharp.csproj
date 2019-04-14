@@ -81,6 +81,9 @@
     <Compile Include="Assets\src\Irven\Toolbar.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManager.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManagerCollisionTest.cs" />
+    <Compile Include="Assets\src\Jeff\Other Scripts\AFactory.cs" />
+    <Compile Include="Assets\src\Jeff\Other Scripts\BackgroundClutterA.cs" />
+    <Compile Include="Assets\src\Jeff\Other Scripts\BackgroundClutterB.cs" />
     <Compile Include="Assets\src\Jeff\Other Scripts\HSHUD.cs" />
     <Compile Include="Assets\src\Jeff\Other Scripts\HSTB.cs" />
     <Compile Include="Assets\src\Jeff\Other Scripts\HUDTest.cs" />
@@ -89,6 +92,9 @@
     <Compile Include="Assets\src\Jeff\Other Scripts\Scroller.cs" />
     <Compile Include="Assets\src\Jeff\Other Scripts\SliderX.cs" />
     <Compile Include="Assets\src\Jeff\Other Scripts\TrackMover.cs" />
+    <Compile Include="Assets\src\Jeff\PreFab\Debree1.cs" />
+    <Compile Include="Assets\src\Jeff\PreFab\Debree2.cs" />
+    <Compile Include="Assets\src\Jeff\PreFab\FlyingJunk.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Builders\ChannelGroup\AddChannelsToChannelGroupRequestBuilder.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Builders\ChannelGroup\DeleteChannelGroupRequestBuilder.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Builders\ChannelGroup\GetAllChannelsForGroupRequestBuilder.cs" />
@@ -213,12 +219,6 @@
     <Compile Include="Assets\src\Jeff\PubNub\Workers\NonSubscribeWorker.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Workers\PresenceHeartbeatWorker.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Workers\SubscriptionWorker.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\AFactory.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\BackgroundClutterA.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\BackgroundClutterB.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\Debree1.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\Debree2.cs" />
-    <Compile Include="Assets\src\Jeff\Scenes\Debree3.cs" />
     <Compile Include="Assets\src\Jeff\Singleton\HUD.cs" />
     <Compile Include="Assets\src\Jeff\Singleton\Upgrades.cs" />
     <Compile Include="Assets\src\Lennin\BarObstacle.cs" />
@@ -289,6 +289,7 @@
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\src\Jeff\PreFab\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />

@@ -15,7 +15,7 @@ public class HUD : SoundManager
 {
     //  Player Score Variable also this is Late Binding "Dyanmic"
     //  these dynamic objects get detected and converted into System.Int32 
-    //  Had to enforce API compatabilioty under plsyer settings to .4 from 2.0.
+    //  Had to enforce API compatability under player settings to .4 from 2.0.
   
     public dynamic PlayerScore = 0;
     public dynamic Multiplier = 1;
