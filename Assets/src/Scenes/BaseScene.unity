@@ -2750,18 +2750,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2946,6 +2934,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[8]
       value: 
       objectReference: {fileID: 2100000, guid: acd51d388e03b43ee91f50f360703603, type: 2}
+    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
 --- !u!1 &993841841
@@ -3370,8 +3370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9589c62aac06b408196cb8122f44df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slide_speed: 0
-  slide_timer: 0
+  slide_timer3: 0
   player: {fileID: 0}
 --- !u!114 &1136319957
 MonoBehaviour:
@@ -3394,7 +3393,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1136319949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ea8e73e2fc123f4d993f76ebdf1738d, type: 3}
+  m_Script: {fileID: 11500000, guid: c059e30222e22664baf3700ff5fb8778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1136319959
@@ -6740,6 +6739,7 @@ MonoBehaviour:
   - 0
   layout: {fileID: 11400000, guid: 2afe6440f093d3e4eb626de9c8621e63, type: 2}
   theGameManager: {fileID: 521189591}
+  FHScore: 0
 --- !u!4 &1961010585
 Transform:
   m_ObjectHideFlags: 0
