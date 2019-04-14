@@ -33,6 +33,11 @@ public class character_move_1 : MonoBehaviour
         }
     }
 
+    //Command pattern
+    private KeyCode left = KeyCode.A;
+    private KeyCode right = KeyCode.D;
+    private KeyCode jump = KeyCode.Space;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,24 +47,24 @@ public class character_move_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D)) //movement input
+        if (Input.GetKeyDown(right)) //movement input
         {
             goingRight = true;
         }
-        else if (Input.GetKeyUp(KeyCode.D))
+        else if (Input.GetKeyUp(right))
         {
             goingRight = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(left))
         {
             goingLeft = true;
         }
-        else if (Input.GetKeyUp(KeyCode.A))
+        else if (Input.GetKeyUp(left))
         {
             goingLeft = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(jump))
         {
             initJump = true;
         }

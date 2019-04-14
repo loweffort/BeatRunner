@@ -5,14 +5,15 @@ using UnityEngine;
 public class character_slide_1 : MonoBehaviour
 {
     //[SerializeField] //see float data in unity use to be test
-    private static float slide_speed1 = 30.0f;
+    static private float slide_speed1 = 30.0f;
     [SerializeField]
     private float slide_timer1;
     private float slide_angle1;
     public Transform player;
-
     private bool slide_right;
 
+    //Command pattern
+    private KeyCode slide = KeyCode.S;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class character_slide_1 : MonoBehaviour
             if (slide_angle1 >= 0)
                 slide_timer1 = 2;
         }
-        else if (Input.GetKeyUp(KeyCode.S) && player.transform.rotation.z > 90 && player.transform.position.y < 6 || slide_angle1 > -90 && !slide_right) //get input and up boundary of ground
+        else if (Input.GetKeyUp(slide) && player.transform.rotation.z > 90 && player.transform.position.y < 6 || slide_angle1 > -90 && !slide_right) //get input and up boundary of ground
         {
             slide_angle1 -= slide_speed1 * Time.deltaTime;
             slide_timer1 -= Time.deltaTime;
@@ -38,7 +39,7 @@ public class character_slide_1 : MonoBehaviour
         else if (slide_angle1 < 0)
             slide_angle1 += slide_speed1 * Time.deltaTime;
 
-        if (Input.GetKeyUp(KeyCode.S) && player.transform.position.y < 6) // make sure when jump cannot slide
+        if (Input.GetKeyUp(slide) && player.transform.position.y < 6) // make sure when jump cannot slide
         {
             slide_right = false;
             slide_timer1 = 2;
