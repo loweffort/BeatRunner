@@ -1,12 +1,11 @@
-﻿
-
+﻿//jump movement
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class character_jump_1 : MonoBehaviour
 {
-    //private boolen
+	//private boolen
     bool initJump = false;
     //Transform player;
 

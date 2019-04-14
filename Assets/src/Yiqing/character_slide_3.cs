@@ -6,13 +6,13 @@ using UnityEngine;
 public class character_slide_3 : MonoBehaviour
 {
     //[SerializeField]
-    float slide_speed3 = 30.0f;
+    private static float slide_speed3 = 30.0f;
     [SerializeField]
-    float slide_timer3;
-    float slide_angle3;
+    private float slide_timer3;
+    private float slide_angle3;
     public Transform player;
 
-    bool slide_down;
+    private bool slide_down;
 
     // Start is called before the first frame update
     void Start()

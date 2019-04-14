@@ -1,32 +1,36 @@
-//Character move left or right
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Character move left or right and jump
 public class character_move_1 : MonoBehaviour
 {
-    //private boolen
-    bool goingLeft = false;
-    bool goingRight = false;
-    //public Transform player;
+    private bool goingLeft = false;
+    private bool goingRight = false;
+    private bool initJump = false;
+    //singleton
+    private static character_move_1 instance = null;
+    private static readonly object padlock = new object();
+    private character_move_1() 
+    { 
 
-    //initailize the singleton instance
-    //public static character_move_1 Instance = null;
-    static internal character_move_1 Instance = null; 
-    // Initialize the singleton instance.
-    private void Awake()
+    }
+
+    public static character_move_1 Instance
     {
-        // If there is not already an instance of character_move_1, set it to this.
-        if (Instance == null)
-        {
-            Instance = this;
+        get {
+            if(instance != null)
+            {
+                return instance;
+            }
+            lock(padlock)
+            {
+                if(instance == null)
+                {
+                    instance = new character_move_1();
+                }
+                return instance;
+            }
         }
-        //If an instance already exists, destroy whatever this object is to enforce the singleton.
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-
     }
 
     // Start is called before the first frame update
@@ -55,6 +59,10 @@ public class character_move_1 : MonoBehaviour
         {
             goingLeft = false;
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            initJump = true;
+        }
     }
         void FixedUpdate()
         { 
@@ -72,6 +80,11 @@ public class character_move_1 : MonoBehaviour
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
             // not move without input or hit boundary
+        }
+        if (initJump && transform.position.y < 6) // input jump and the character height < 5.6
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);//jump height
+            initJump = false;
         }
 
         //add force to move
