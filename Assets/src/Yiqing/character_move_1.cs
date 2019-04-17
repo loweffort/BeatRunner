@@ -1,12 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Character move left or right and jump
+//Character move left or right
 public class character_move_1 : MonoBehaviour
 {
+	//use to lock movement
     private bool goingLeft = false;
     private bool goingRight = false;
     private bool initJump = false;
+
+    // binding command
+    private KeyCode left = KeyCode.A;
+    private KeyCode right = KeyCode.D;
+    private KeyCode jump = KeyCode.Space;
+    private KeyCode slide = KeyCode.S;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+    
     //singleton
     private static character_move_1 instance = null;
     private static readonly object padlock = new object();
@@ -14,8 +28,8 @@ public class character_move_1 : MonoBehaviour
     { 
 
     }
-
-    public static character_move_1 Instance
+    //only use in instance of character controller 
+    private static character_move_1 Instance
     {
         get {
             if(instance != null)
@@ -24,6 +38,7 @@ public class character_move_1 : MonoBehaviour
             }
             lock(padlock)
             {
+            //If instance is not exist instantiate            	
                 if(instance == null)
                 {
                     instance = new character_move_1();
@@ -33,21 +48,21 @@ public class character_move_1 : MonoBehaviour
         }
     }
 
-    //Command pattern
-    private KeyCode left = KeyCode.A;
-    private KeyCode right = KeyCode.D;
-    private KeyCode jump = KeyCode.Space;
-
-    // Start is called before the first frame update
-    void Start()
+    // Virtual use to reset and initialize the check movement boolen value
+    public virtual void Setup()
     {
-        
+    	goingLeft = false;
+    	goingRight = false;
+    	initJump = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(right)) //movement input
+    	//movement input is true, give true value to each bool value
+    	//left boundary -10 right boundary 50
+        // input jump and the character height 5.5
+        //when jump cannot slide
+        if (Input.GetKeyDown(right) && transform.position.x < 50)
         {
             goingRight = true;
         }
@@ -56,7 +71,7 @@ public class character_move_1 : MonoBehaviour
             goingRight = false;
         }
 
-        if (Input.GetKeyDown(left))
+        if (Input.GetKeyDown(left) && transform.position.x > -10)
         {
             goingLeft = true;
         }
@@ -64,33 +79,36 @@ public class character_move_1 : MonoBehaviour
         {
             goingLeft = false;
         }
-        if (Input.GetKeyDown(jump))
+       /* if (Input.GetKeyUp(jump) && transform.position.y >5.4 )
         {
             initJump = true;
-        }
+        }*/
     }
+        // Update is called once per frame
         void FixedUpdate()
         { 
-        if (goingLeft && transform.position.x > -10)
+        if (goingLeft)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-60, GetComponent<Rigidbody>().velocity.y, 0); 
-            //Debug.Log("Left movement sucess");
+            Debug.Log("Left movement sucess");
         }
-        else if(goingRight && transform.position.x < 50)
+        else if(goingRight)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(60, GetComponent<Rigidbody>().velocity.y, 0);
-           // Debug.Log("Right movement sucess");
+            Debug.Log("Right movement sucess");
         }
         else
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
             // not move without input or hit boundary
+            GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
         }
-        if (initJump && transform.position.y < 6) // input jump and the character height < 5.6
+        /*if (initJump) 
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);//jump height
+        	//jump height 50
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);
+            Debug.Log("Jump sucess");
             initJump = false;
-        }
+        }*/
 
         //add force to move
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
