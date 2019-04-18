@@ -11,6 +11,7 @@ public class PlayerCharacter : MonoBehaviour
         Debug.Log("Collision with "+ collision.gameObject.name);
         if(collision.gameObject.name == "badObstacle")
         {
+            //Please add SoundOnCollision here
             theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
         }
     }

@@ -27,12 +27,6 @@ public class SoundManagerBoundaryTest : MonoBehaviour
     }
     private void Update()
     { 
-        // if(testFail || testPass)
-        // {
-        //     yield return new WaitForSeconds(5);
-        //     Application.Quit();
-        // }
-
         if(!testFail && !testPass)
         {
             //Should play 1000 sounds consecutively

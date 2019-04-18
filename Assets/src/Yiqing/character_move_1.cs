@@ -90,12 +90,12 @@ public class character_move_1 : MonoBehaviour
         if (goingLeft)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-60, GetComponent<Rigidbody>().velocity.y, 0); 
-            Debug.Log("Left movement sucess");
+            // Debug.Log("Left movement sucess");
         }
         else if(goingRight)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(60, GetComponent<Rigidbody>().velocity.y, 0);
-            Debug.Log("Right movement sucess");
+            // Debug.Log("Right movement sucess");
         }
         else
         {

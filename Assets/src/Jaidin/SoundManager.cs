@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SoundManager : MonoBehaviour
     private float[] prevspectrum = new float[2048];
     private float[] prevprevspectrum = new float [2048];
     //This can be modified to eliminate noise; 0 seems to be the most consistent
-    private static int threshold = 0;
+    private static float threshold = 0.032f;
     void Start()
     {
         AudioSource[] sources = GetComponents<AudioSource>();
@@ -44,12 +45,14 @@ public class SoundManager : MonoBehaviour
         for (int i = 1; i < spectrum.Length - 1; i++)
         { 
             //Square each, to eliminate some less prevalent frequencies (we only want to focus on the primary frequency in each)
-            spectrum[i] = spectrum[i] *spectrum[i];
+            // spectrum[i] = spectrum[i] *spectrum[i];
         }
             //Compare only in the bass - midrange
-        for(int j = (50/frequencyGranularity); j < 500/frequencyGranularity; j++){
+        for(int j = (int)System.Math.Floor(50/frequencyGranularity); j < (int)System.Math.Ceiling(500/frequencyGranularity); j++){
             if(prevspectrum[j] - spectrum[j] > threshold && prevspectrum[j] -prevprevspectrum[j] > threshold){
                 //SEND SIGNAL TO OBSTACLES
+                Debug.Log("OBSTACLE");
+
                 break;
             }
         }
@@ -88,8 +91,8 @@ public class SoundManager : MonoBehaviour
     /* MOVE TO OTHER CLASS, BUILD ADAPTER BETWEEN */
     void Update()
     {
+        
         AnalyzeSong(musicSource);
-
         TimeElapsed += Time.deltaTime;
 
         if(TimeElapsed >= SongDuration) //Right now, song will loop endlessly
