@@ -219,8 +219,15 @@
     <Compile Include="Assets\src\Jeff\PubNub\Workers\NonSubscribeWorker.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Workers\PresenceHeartbeatWorker.cs" />
     <Compile Include="Assets\src\Jeff\PubNub\Workers\SubscriptionWorker.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\DRBCMODE.cs" />
     <Compile Include="Assets\src\Jeff\Singleton\HUD.cs" />
-    <Compile Include="Assets\src\Jeff\Singleton\Upgrades.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Attmept2M.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Basic Struct\AttemptMemento.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Basic Struct\Memento.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Basic Struct\Originator.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Momento2.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\Player.cs" />
+    <Compile Include="Assets\src\Jeff\Singleton\Momento\PlayerMemory.cs" />
     <Compile Include="Assets\src\Lennin\BarObstacle.cs" />
     <Compile Include="Assets\src\Lennin\GameManagerObstacleTest.cs" />
     <Compile Include="Assets\src\Lennin\Obstacle.cs" />

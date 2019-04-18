@@ -9,8 +9,6 @@ using UnityEngine.SceneManagement;
 //    int Multiplier{ get; }
 //}
 
-
-
 public class HUD : SoundManager
 {
     //  Player Score Variable also this is Late Binding "Dyanmic"
@@ -19,6 +17,8 @@ public class HUD : SoundManager
   
     public dynamic PlayerScore = 0;
     public dynamic Multiplier = 1;
+    public bool ActiveButton = false;
+    public bool ActiveButton2 = false;
 
     // Static Binding (Early),  the compiler already knows about what kind 
     // of object it is and what are the methods or properties it holds
@@ -33,6 +33,8 @@ public class HUD : SoundManager
     GameObject theMenu;
     // Will Change later depending on Naming conventions
     public GameManager theGameManager;
+    public DRBCMODE theUpgrades;
+    public Player thePlayer;
 
     private float timer = 0;
     // Start is called before the first frame update
@@ -42,12 +44,15 @@ public class HUD : SoundManager
         //theChar = GameObject.FindGameObjectWithTag("Character");
         
     }
+    //*****************************************************************************************
     // Virtual is Used
     public virtual void ResetScore()
     {
         FHScore = PlayerScore;
         PlayerScore = 0;
         Multiplier = 1;
+        ActiveButton2 = false;
+        ActiveButton = true;
         //Multiplier = TestInc + 5000000;
         //TestInc = Multiplier;
     }
@@ -67,7 +72,7 @@ public class HUD : SoundManager
         }
     public float FHScore;
     //Singleton   
-
+    //*****************************************************************************************
 
     void CollisionSifter(Collision collision)
     {
@@ -97,7 +102,7 @@ public class HUD : SoundManager
         // is set in the class.So, if the Player hits my menu button I want to send a signal
         // to the Menu Function to execute DisplayMenu, for now I am just seeing if we 
         // can just reset the game with score and ensure Menu Manager and Game Manager can communicate
-        if (GUI.Button(new Rect(Screen.width - 125, 20, 120, 15), "Menu"))
+        if (GUI.Button(new Rect(Screen.width - 125, 20, 120, 20), "Menu"))
         {
             //GUI.Label(new Rect(Screen.width - 90, 20, 100, 15), "Menu Not Working Yet");
             PlayerScore = 0;
@@ -106,18 +111,46 @@ public class HUD : SoundManager
             SceneManager.LoadScene(sceneName: "Menu");
         }
 
-        if (GUI.Button(new Rect(Screen.width - 125, 35, 120, 15), "Restart"))
+        if (GUI.Button(new Rect(Screen.width - 125, 35, 120, 20), "Restart"))
         {
             // Player Score Returns to 0
             PlayerScore = 0;
             // This will send the RestartGame function to the Game Manager, I forgot who controls this.
             theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
         }
-        //if (GUI.Button(new Rect(Screen.width / 2 - 60, 35, 0, 0), "Menu"))
-        //{ 
-        // This will send the DisplayerMenu function to the Menu Manager
-        //    theGameManager.SendMessage("DisplayMenu", 0.5f, SendMessageOptions.RequireReceiver);
-        //}
+
+        if (ActiveButton == true)
+        {
+            if (GUI.Button(new Rect(Screen.width - 125, 50, 120, 20), "DR.BC") || (Input.GetKeyDown(KeyCode.B)))
+            {
+                // Player Score Returns to 0
+                //PlayerScore = 0;
+                Multiplier = 999;
+                // This will send the RestartGame function to the Game Manager, I forgot who controls this.
+                theUpgrades.SendMessage("StartCycle", 0.5f, SendMessageOptions.RequireReceiver);
+                //button.gameObject.SetActive(false);
+                //button.gameObject.SetActive(true);
+                ActiveButton2 = true;
+                ActiveButton = false;
+
+            }
+        }
+
+        if (ActiveButton2 == true)
+        {
+            if (GUI.Button(new Rect(Screen.width - 125, 50, 120, 20), "Undo") || (Input.GetKeyDown(KeyCode.N)))
+            {
+                // Player Score Returns to 0
+                //PlayerScore = 0;
+                Multiplier = 1;
+                // This will send the RestartGame function to the Game Manager, I forgot who controls this.
+                thePlayer.SendMessage("RestoreMemento", 0.5f, SendMessageOptions.RequireReceiver);
+                //button.gameObject.SetActive(false);
+                //button.gameObject.SetActive(true);
+                ActiveButton = true;
+                ActiveButton2 = false;
+            }
+        }
 
         // This is where I need to figure out how to A. Display when to say winner, send to a f(x)
         // for high score comparisons, for now I will just see if we can get the score and song seconds
@@ -127,19 +160,24 @@ public class HUD : SoundManager
         //     GUI.Label(new Rect(Screen.width / 2 - 150, 200, 2000, 1000), "Wow, You are Fast!");
         //}
 
-
-        
-
-
-
     }
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer % 60 == 0) ;
+        if (timer % 60 == 0);
             PlayerScore += Multiplier;
-    
-        
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            ActiveButton = true;
+            ActiveButton2 = false;
+        }
+        else if
+            (Input.GetKeyDown(KeyCode.B))
+        {
+            ActiveButton2 = true;
+            ActiveButton = false;
+        }
     }
 }

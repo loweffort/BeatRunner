@@ -3365,7 +3365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136319949}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad9589c62aac06b408196cb8122f44df, type: 3}
   m_Name: 
@@ -6737,8 +6737,12 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  ActiveButton: 1
+  ActiveButton2: 0
   layout: {fileID: 11400000, guid: 2afe6440f093d3e4eb626de9c8621e63, type: 2}
   theGameManager: {fileID: 521189591}
+  theUpgrades: {fileID: 0}
+  thePlayer: {fileID: 0}
   FHScore: 0
 --- !u!4 &1961010585
 Transform:
