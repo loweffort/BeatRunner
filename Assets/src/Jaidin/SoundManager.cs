@@ -22,9 +22,10 @@ public class SoundManager : MonoBehaviour
         collisionSource = sources[1];
         collision = collisionSource.clip;
         AnalyzeSong(musicSource);
-    }
+    }   
 
-    public void AnalyzeSong(AudioSource song)
+    //spectrum should be used by the obstacle manager to generate obstacle positions. 
+    public float[] AnalyzeSong(AudioSource song) 
     {
         song.GetOutputData(samples, 0);
         
@@ -38,10 +39,13 @@ public class SoundManager : MonoBehaviour
             Debug.DrawLine(new Vector3(i - 1, Mathf.Log(spectrum[i - 1]) + 10, 2), new Vector3(i, Mathf.Log(spectrum[i]) + 10, 2), Color.cyan);
             Debug.DrawLine(new Vector3(Mathf.Log(i - 1), spectrum[i - 1] - 10, 1), new Vector3(Mathf.Log(i), spectrum[i] - 10, 1), Color.green);
             Debug.DrawLine(new Vector3(Mathf.Log(i - 1), Mathf.Log(spectrum[i - 1]), 3), new Vector3(Mathf.Log(i), Mathf.Log(spectrum[i]), 3), Color.blue);
-        } //************//
+        } 
+        //************//
                               //more analysis done here
-        return;
+        return spectrum;
     }
+
+    //This pauses, allowing for resume at the same point from which it was paused
     public void PauseMusic()
     {
         musicSource.Pause();
@@ -55,7 +59,8 @@ public class SoundManager : MonoBehaviour
         musicSource.Play(0);
     }
 
-    public void StopMusic()
+    //This resets song, will start from beginning next time it is played
+    public void StopMusic() 
     {
         musicSource.Stop();
     }
