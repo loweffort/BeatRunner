@@ -26,13 +26,13 @@ public class SoundManagerCollisionTest : MonoBehaviour
         }
     }
 
-    private IEnumerator Update()
+    private void Update()
     { 
-        if(testFail || testPass)
-        {
-            yield return new WaitForSeconds(5);
-            Application.Quit();
-        }
+        // if(testFail || testPass)    
+        // {
+        //     yield return new WaitForSeconds(5);
+        //     Application.Quit();
+        // }
 
         if(!testFail && !testPass)
         {

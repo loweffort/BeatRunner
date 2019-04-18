@@ -64,7 +64,7 @@ public class SoundManager : MonoBehaviour
     {
         musicSource.Stop();
     }
-
+    
     public void SoundOnCollision(){
        collisionSource.Play(0);
     }

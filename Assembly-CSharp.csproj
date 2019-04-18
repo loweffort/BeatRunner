@@ -221,10 +221,17 @@
      <Compile Include="Assets\src\Lennin\Obstacles.cs" />
      <Compile Include="Assets\src\Lennin\WallObstacle.cs" />
      <Compile Include="Assets\src\Yiqing\camera_follower_1.cs" />
+     <Compile Include="Assets\src\Yiqing\character_jump_1.cs" />
      <Compile Include="Assets\src\Yiqing\character_move_1.cs" />
      <Compile Include="Assets\src\Yiqing\character_slide_1.cs" />
      <Compile Include="Assets\src\Yiqing\character_slide_3.cs" />
-     <Compile Include="Assets\src\Yiqing\hit_obstacle.cs" />
+     <Compile Include="Assets\src\Yiqing\command\Client.cs" />
+     <Compile Include="Assets\src\Yiqing\command\Command.cs" />
+     <Compile Include="Assets\src\Yiqing\command\CommandMove.cs" />
+     <Compile Include="Assets\src\Yiqing\command\Invoker.cs" />
+     <Compile Include="Assets\src\Yiqing\command\Receiver.cs" />
+     <Compile Include="Assets\src\Yiqing\YM_fps_test1.cs" />
+     <Compile Include="Assets\src\Yiqing\YM_test1.cs" />
      <Compile Include="Assets\TestButtonMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -274,7 +281,6 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
-     <None Include="Assets\src\Jaidin\A File.txt" />
      <None Include="Assets\src\Irven\A File.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
