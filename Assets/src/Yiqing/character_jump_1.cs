@@ -1,17 +1,13 @@
-﻿
-
+﻿//jump movement
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class character_jump_1 : MonoBehaviour
 {
-    //private boolen
     bool initJump = false;
-    //Transform player;
-
+    //public Transform player;
     // Start is called before the first frame update
-
 
     void Update()
     {

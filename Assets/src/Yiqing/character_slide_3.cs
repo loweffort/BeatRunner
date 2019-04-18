@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class character_slide_3 : MonoBehaviour
 {
-    //[SerializeField]
-    float slide_speed3 = 30.0f;
+    private static float slide_speed3 = 30.0f;
     [SerializeField]
-    float slide_timer3;
-    float slide_angle3;
+    private float slide_timer3;
+    private float slide_angle3;
     public Transform player;
-
-    bool slide_down;
+    private bool slide_down;
+    //binding command
+    private KeyCode left = KeyCode.A;
+    private KeyCode right = KeyCode.D;
+    private KeyCode jump = KeyCode.Space;
+    private KeyCode slide = KeyCode.S;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class character_slide_3 : MonoBehaviour
             if (slide_angle3 >= 0)
                 slide_timer3 = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.S) && player.transform.rotation.x > 90 && player.transform.position.y < 6 || slide_angle3 > -90 && !slide_down)//get input and up boundary of ground
+        else if (Input.GetKeyDown(slide) && !Input.GetKeyUp(jump)  && player.transform.rotation.x > 90 && player.transform.position.y < 6 || slide_angle3 > -90 && !slide_down)//get input and up boundary of ground
         {
             slide_angle3 -= slide_speed3 * Time.deltaTime;
             slide_timer3 -= Time.deltaTime;
@@ -39,11 +42,11 @@ public class character_slide_3 : MonoBehaviour
         else if (slide_angle3 < 0)
             slide_angle3 += slide_speed3 * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.S) && player.transform.position.y < 6)// make sure when jump cannot slide
+        if (Input.GetKeyDown(slide) && !Input.GetKeyUp(jump) && player.transform.position.y < 6)// make sure when jump cannot slide
         {
             slide_down = false;
             slide_timer3 = 2;
-            //Debug.Log("Slide sucess");
+            Debug.Log("Slide down sucess");
         }
         player.transform.rotation = Quaternion.Euler(slide_angle3, 0, 0);
 

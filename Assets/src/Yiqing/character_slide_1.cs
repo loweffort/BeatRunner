@@ -4,14 +4,18 @@ using UnityEngine;
 //slide to right for the ship slide in z direction
 public class character_slide_1 : MonoBehaviour
 {
-    //[SerializeField] //see float data in unity use to be test
-    float slide_speed1 = 30.0f;
+    private static float slide_speed1 = 30.0f;
     [SerializeField]
-    float slide_timer1;
-    float slide_angle1;
+    private float slide_timer1;
+    private float slide_angle1;
     public Transform player;
+    private bool slide_right = false;
 
-    bool slide_right;
+    //binding command
+    private KeyCode left = KeyCode.A;
+    private KeyCode right = KeyCode.D;
+    private KeyCode jump = KeyCode.Space;
+    private KeyCode slide = KeyCode.S;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,12 @@ public class character_slide_1 : MonoBehaviour
 
     }
 
+    //dynamic binding Virtual use to reset and initialize the check movement boolen value
+    public virtual void Setup2()
+    {
+        slide_timer1 = 0;
+        slide_angle1 = 0;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -28,7 +38,8 @@ public class character_slide_1 : MonoBehaviour
             if (slide_angle1 >= 0)
                 slide_timer1 = 2;
         }
-        else if (Input.GetKeyUp(KeyCode.W) && player.transform.rotation.z > 90 && player.transform.position.y < 6 || slide_angle1 > -90 && !slide_right) //get input and up boundary of ground
+        //get input and up boundary of ground
+        else if (Input.GetKeyDown(slide) && player.transform.rotation.z > 90 && player.transform.position.y < 6 || slide_angle1 > -90 && !slide_right) 
         {
             slide_angle1 -= slide_speed1 * Time.deltaTime;
             slide_timer1 -= Time.deltaTime;
@@ -37,12 +48,12 @@ public class character_slide_1 : MonoBehaviour
         }
         else if (slide_angle1 < 0)
             slide_angle1 += slide_speed1 * Time.deltaTime;
-
-        if (Input.GetKeyUp(KeyCode.W) && player.transform.position.y < 6) // make sure when jump cannot slide
+        // make sure when jump cannot slide and when slide cannot jump
+        if (Input.GetKeyDown(slide) && player.transform.position.y < 6) 
         {
             slide_right = false;
             slide_timer1 = 2;
-            //Debug.Log("Slide sucess");
+            Debug.Log("Slide right sucess");
         }
         player.transform.rotation = Quaternion.Euler(0, 0, slide_angle1);
 

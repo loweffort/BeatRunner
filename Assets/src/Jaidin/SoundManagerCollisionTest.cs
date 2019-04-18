@@ -6,8 +6,8 @@ public class SoundManagerCollisionTest : MonoBehaviour
 {
     public SoundManager soundManager;
     public HUD hud;
-    public BarObstacle barObstacle;
-    public PlayerCharacter playerCharacter;
+    // public BarObstacle barObstacle;
+    // public PlayerCharacter playerCharacter;
     bool testFail = false;
     bool testPass = false;
     int soundFrequency = 1;
@@ -26,18 +26,18 @@ public class SoundManagerCollisionTest : MonoBehaviour
         }
     }
 
-    private IEnumerator Update()
+    private void Update()
     { 
-        if(testFail || testPass)
-        {
-            yield return new WaitForSeconds(5);
-            Application.Quit();
-        }
+        // if(testFail || testPass)    
+        // {
+        //     yield return new WaitForSeconds(5);
+        //     Application.Quit();
+        // }
 
         if(!testFail && !testPass)
         {
             soundFrequency++;
-            for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++)
+            for(int i = 0; i < System.Math.Ceiling(soundFrequency*Time.deltaTime); i++)
             {
                 soundManager.SoundOnCollision();
             }

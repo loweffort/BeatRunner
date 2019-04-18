@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class SoundManager : MonoBehaviour
     public float SongDuration;
     private AudioClip collision;
     public AudioSource collisionSource;
-    public float[] samples = new float[2048];
+    private float[] spectrum = new float[2048];
+    private float[] prevspectrum = new float[2048];
+    private float[] prevprevspectrum = new float [2048];
+    //This can be modified to eliminate noise; 0 seems to be the most consistent
+    private static float threshold = 0.032f;
     void Start()
     {
         AudioSource[] sources = GetComponents<AudioSource>();
@@ -21,27 +26,44 @@ public class SoundManager : MonoBehaviour
         SongDuration = song.length;
         collisionSource = sources[1];
         collision = collisionSource.clip;
-        AnalyzeSong(musicSource);
-    }
+        BeginMusic();
+    }   
 
-    public void AnalyzeSong(AudioSource song)
+    //spectrum should be used by the obstacle manager to generate obstacle positions. 
+    public void AnalyzeSong(AudioSource song) 
     {
-        song.GetOutputData(samples, 0);
-        
-        //THIS IS TEMPORARY CODE, WILL BE REPLACED LATER
-        float[] spectrum = new float[256];
-        musicSource.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+    /*
+    If I have time, do for multiple frequency sets, or expand so it only samples every few updates (maybe set to 15/sec?)
+    Also, play song 1/2 sec ahead of itself so sampling works correctly here
+    */        
+        //This sampling is chosen to best isolate each band out of the spectrum
+        musicSource.GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris); 
+
+        //This is the width of each band (in Hz) in the spectrum taken above
+        float frequencyGranularity = (float)AudioSettings.outputSampleRate /2f /spectrum.Length;         
 
         for (int i = 1; i < spectrum.Length - 1; i++)
         { 
-            Debug.DrawLine(new Vector3(i - 1, spectrum[i] + 10, 0), new Vector3(i, spectrum[i + 1] + 10, 0), Color.red);
-            Debug.DrawLine(new Vector3(i - 1, Mathf.Log(spectrum[i - 1]) + 10, 2), new Vector3(i, Mathf.Log(spectrum[i]) + 10, 2), Color.cyan);
-            Debug.DrawLine(new Vector3(Mathf.Log(i - 1), spectrum[i - 1] - 10, 1), new Vector3(Mathf.Log(i), spectrum[i] - 10, 1), Color.green);
-            Debug.DrawLine(new Vector3(Mathf.Log(i - 1), Mathf.Log(spectrum[i - 1]), 3), new Vector3(Mathf.Log(i), Mathf.Log(spectrum[i]), 3), Color.blue);
-        } //************//
-                              //more analysis done here
+            //Square each, to eliminate some less prevalent frequencies (we only want to focus on the primary frequency in each)
+            // spectrum[i] = spectrum[i] *spectrum[i];
+        }
+            //Compare only in the bass - midrange
+        for(int j = (int)System.Math.Floor(50/frequencyGranularity); j < (int)System.Math.Ceiling(500/frequencyGranularity); j++){
+            if(prevspectrum[j] - spectrum[j] > threshold && prevspectrum[j] -prevprevspectrum[j] > threshold){
+                //SEND SIGNAL TO OBSTACLES
+                Debug.Log("OBSTACLE");
+
+                break;
+            }
+        }
+        //Copy through for next run
+        prevspectrum.CopyTo(prevprevspectrum, 0);
+        spectrum.CopyTo(prevspectrum, 0);
+         
         return;
     }
+
+    //This pauses, allowing for resume at the same point from which it was paused
     public void PauseMusic()
     {
         musicSource.Pause();
@@ -55,7 +77,8 @@ public class SoundManager : MonoBehaviour
         musicSource.Play(0);
     }
 
-    public void StopMusic()
+    //This resets song, will start from beginning next time it is played
+    public void StopMusic() 
     {
         musicSource.Stop();
     }
@@ -64,17 +87,22 @@ public class SoundManager : MonoBehaviour
        collisionSource.Play(0);
     }
     // Update is called once per frame
+
+    /* MOVE TO OTHER CLASS, BUILD ADAPTER BETWEEN */
     void Update()
     {
+        
+        AnalyzeSong(musicSource);
         TimeElapsed += Time.deltaTime;
 
         if(TimeElapsed >= SongDuration) //Right now, song will loop endlessly
         {
             TimeElapsed = 0;
-            BeginMusic();
+            // BeginMusic();
             gameManager.SendMessage("WonGame", 0.5f, SendMessageOptions.RequireReceiver);
             // Having the SoundMGR send the signal to save the score to Server.
-            //HUD.SendMessage("SaveHS", 0.5f, SendMessageOptions.RequireReceiver);
+            // HUD.SendMessage("SaveHS", 0.5f, SendMessageOptions.RequireReceiver);
         }
     }
+    
 }
