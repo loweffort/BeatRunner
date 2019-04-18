@@ -37,7 +37,7 @@ public class SoundManagerCollisionTest : MonoBehaviour
         if(!testFail && !testPass)
         {
             soundFrequency++;
-            for(int i = 0; i < System.Math.Floor(Time.deltaTime/soundFrequency); i++)
+            for(int i = 0; i < System.Math.Ceiling(soundFrequency*Time.deltaTime); i++)
             {
                 soundManager.SoundOnCollision();
             }
