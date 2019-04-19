@@ -17,28 +17,24 @@ public class SoundManagerCollisionTest : MonoBehaviour
     {
         if (testFail)
         {
-            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at sound rate of: " + soundFrequency + "/s");
+            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at sound rate of: " + soundFrequency);
         }
         if (testPass)
         {
-            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test passed, reaching 1000 sounds/second");
+            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test passed, reaching 60 simultanious sounds");
 
         }
     }
 
     private void Update()
     { 
-        // if(testFail || testPass)    
-        // {
-        //     yield return new WaitForSeconds(5);
-        //     Application.Quit();
-        // }
 
         if(!testFail && !testPass)
         {
             soundFrequency++;
-            for(int i = 0; i < System.Math.Ceiling(soundFrequency*Time.deltaTime); i++)
+            for(int i = 0; i < soundFrequency; i++)
             {
+                Debug.Log("sound");
                 soundManager.SoundOnCollision();
             }
             if(!soundManager.collisionSource.isPlaying)
@@ -46,7 +42,7 @@ public class SoundManagerCollisionTest : MonoBehaviour
                 testFail = true;
             }
         }
-        if(soundFrequency > 1000 && !testFail)
+        if(soundFrequency > 60 && !testFail)
         {
             testPass = true;
         }

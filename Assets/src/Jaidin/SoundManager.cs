@@ -82,7 +82,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void SoundOnCollision(){
-       collisionSource.Play(0);
+       collisionSource.PlayOneShot(collision);
     }
     // Update is called once per frame
 
@@ -93,12 +93,10 @@ public class SoundManager : MonoBehaviour
         AnalyzeSong(musicSource);
         TimeElapsed += Time.deltaTime;
 
-        if(TimeElapsed >= SongDuration) //Right now, song will loop endlessly
+        if(TimeElapsed >= SongDuration) 
         {
-            TimeElapsed = 0;
-            // BeginMusic();
             gameManager.SendMessage("WonGame", 0.5f, SendMessageOptions.RequireReceiver);
-            // Having the SoundMGR send the signal to save the score to Server.
+            // Currently this function does not exist.
             // HUD.SendMessage("SaveHS", 0.5f, SendMessageOptions.RequireReceiver);
         }
     }
