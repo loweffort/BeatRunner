@@ -48,8 +48,7 @@ public class character_move : MonoBehaviour
         }
     }
 
-    // Virtual use to reset and initialize the check movement boolen value
-    public virtual void Setup()
+    public void Setup()
     {
     	goingLeft = false;
     	goingRight = false;
