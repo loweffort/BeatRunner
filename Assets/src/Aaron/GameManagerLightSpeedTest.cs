@@ -14,6 +14,8 @@ public class GameManagerLightSpeedTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = SoundManager.getInstance();
+
         prevTime = (int)Time.time;
         barObstacle.name = "barObstacle";
     }
