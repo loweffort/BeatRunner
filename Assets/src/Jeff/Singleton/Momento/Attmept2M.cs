@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+// Main purpose is storing the origanl state of the game for undoing DRBC mode
+// Also to be used for future implmenebtation of the High Score Server.
 namespace GoFM
 {
 

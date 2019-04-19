@@ -57,7 +57,13 @@ public class HUD : SoundManager
         //TestInc = Multiplier;
     }
 
-    //Singleton
+    //Singleton, keep high score to have only one instance at a time as you dont want multiple
+    // high scores being produced in the game which if it were to be possible 
+    // someone might be tempted to do injection attacks to overwrite your code and cheat.
+    // Class Singleton: -SingletonIstanceL Singleton +getinstance(): Singleton ---new---> Class Singleton
+    // This tyle should not be used if you need multiple instance of the high score variable,
+    // Possible alternatives are a decorator but that may be better suited for DRBC mode or momento. 
+
     private new static HUD instance = null;
         public static HUD SharedInstance
         {
