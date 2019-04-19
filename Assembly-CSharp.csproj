@@ -88,6 +88,7 @@
     <Compile Include="Assets\src\Irven\CreditBackground.cs" />
     <Compile Include="Assets\src\Irven\DiplayInstruction.cs" />
     <Compile Include="Assets\src\Irven\OptionButton.cs" />
+    <Compile Include="Assets\src\Irven\ReplayLevel.cs" />
     <Compile Include="Assets\src\Irven\StartButton.cs" />
     <Compile Include="Assets\src\Irven\StartHidden.cs" />
     <Compile Include="Assets\src\Irven\Toolbar.cs" />
