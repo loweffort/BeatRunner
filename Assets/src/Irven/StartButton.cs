@@ -8,6 +8,6 @@ public class StartButton : MonoBehaviour
     public void startGame()
     {
         Debug.Log("starting");
-        SceneManager.LoadScene(sceneName: "BaseScene");
+        SceneManager.LoadScene(sceneName: "DifficultySelection");
     }
 }

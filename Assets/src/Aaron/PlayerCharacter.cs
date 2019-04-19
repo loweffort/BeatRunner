@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public GameManager theGameManager = GameManager.Instance;
+    public GameManager theGameManager;
 
     void OnCollisionEnter(Collision collision)
     {

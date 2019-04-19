@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerLightSpeedTest : MonoBehaviour
+public class GameManagerLightSpeedTest : GameManager
 {
-    public SoundManager soundManager;
-    public HUD hud;
     public BarObstacle barObstacle;
-    public PlayerCharacter playerCharacter;
     int prevTime;
     int speedIncrement;
     bool testFail = false;
@@ -17,19 +14,27 @@ public class GameManagerLightSpeedTest : MonoBehaviour
         soundManager = SoundManager.getInstance();
 
         prevTime = (int)Time.time;
-        barObstacle.name = "barObstacle";
+        barObstacle.name = "badObstacle";
     }
 
     private void OnGUI()
     {
         if (testFail)
         {
-            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Test failed at a velocity of " + 100 * speedIncrement);
+            GUI.Label(new Rect(80 - 12, 50, 100, 100), "Collision failed at a velocity of " + 100 * speedIncrement);
+            if(100 * speedIncrement > 500)
+            {
+                GUI.Label(new Rect(80 - 12, 100, 100, 100), "Test passed as failure velocity exceeded 500!" );
+            }
+            else
+            {
+                GUI.Label(new Rect(80 - 12, 100, 100, 100), "Test failed as failure velocity was below 500!");
+            }
         }
     }
 
-    private void RestartGame()
-     {
+    public override void RestartGame()
+    {
         barObstacle.transform.position = new Vector3(0, 6, 850);
         barObstacle.transform.rotation = new Quaternion (0, 0, 0, 1);
         playerCharacter.transform.position = new Vector3(22, 2, 80);

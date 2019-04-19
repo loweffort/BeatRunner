@@ -105,7 +105,7 @@ public class SoundManager : MonoBehaviour
     }
 
     public void SoundOnCollision(){
-       collisionSource.PlayOneShot(collision);
+        collisionSource.PlayOneShot(collision);
     }
 
     void Update()
