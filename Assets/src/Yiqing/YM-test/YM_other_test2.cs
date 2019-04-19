@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class YM_test2 : MonoBehaviour
+public class YM_other_test2 : MonoBehaviour
 {
     public GameManager theGameManager;
     private bool iscollision = false;

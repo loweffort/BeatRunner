@@ -13,4 +13,5 @@ public class YM_fps_test1 : MonoBehaviour
         avgFrameRate = (int)current;
         display_Text.text = avgFrameRate.ToString() + " FPS";
     }
+
 }
