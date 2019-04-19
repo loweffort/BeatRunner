@@ -7,7 +7,7 @@ public class YM_test1 : MonoBehaviour
 {
     public GameManager theGameManager;
     private bool iscollision = false;
-    
+    public GameObject playerCharacter;
     string myLog;
     Queue myLogQueue = new Queue();
 
@@ -26,11 +26,18 @@ public class YM_test1 : MonoBehaviour
     {
         if(iscollision)
         {
-            //Destroy(gameObject);
-            //theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
-            //SceneManager.LoadScene(sceneName: "Menu");
+            //Destroy(gameObject,0.5);
+            Reset();
         }
         iscollision = false;   
+    }
+
+    private void Reset()
+    {
+        Instantiate(playerCharacter);
+    	playerCharacter.transform.position = new Vector3(25, 5, 80); //must be the same as the starting position
+       	playerCharacter.transform.rotation = new Quaternion(0, 0, 0, 1);
+        GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, 0);
     }
 
     // Start is called before the first frame update
@@ -38,6 +45,7 @@ public class YM_test1 : MonoBehaviour
     {
 
     }
+
     //print debug message on the screen
     void OnEnable () {
          Application.logMessageReceived += HandleLog;
@@ -63,7 +71,7 @@ public class YM_test1 : MonoBehaviour
      }
  
      void OnGUI () {
-         GUILayout.Label(myLog);
+         //GUILayout.Label(myLog);
      }
  
 }
