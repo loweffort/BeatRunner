@@ -141,6 +141,7 @@ public class GameManagerBaseScene : GameManager
     {
         soundManager.SoundOnCollision();
         DestroyAllObstacles();
+        SceneManager.LoadScene(sceneName: "GameOverScreen");
         playerCharacter.transform.position = new Vector3(25, 5, 80); //must be the same as the starting position
         playerCharacter.transform.rotation = new Quaternion(0, 0, 0, 1);
         playerCharacter.SendMessage("ResetYVelocity", 0.5f, SendMessageOptions.RequireReceiver);
@@ -153,7 +154,7 @@ public class GameManagerBaseScene : GameManager
     public void WonGame()
     {
         RestartGame();
-        SceneManager.LoadScene(sceneName: "Menu");
+        SceneManager.LoadScene(sceneName: "EndScreen");
     }
 
     // Update is called once per frame
