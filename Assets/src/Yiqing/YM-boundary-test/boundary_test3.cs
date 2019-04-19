@@ -24,6 +24,7 @@ public class boundary_test3 : MonoBehaviour
         else if(transform.position.x < -10 )
         {
         	 Debug.Log("Left movement test out of track fail");
+        	GetComponent<Rigidbody>().AddForce(0, -800, 0);
         }
     }
 }

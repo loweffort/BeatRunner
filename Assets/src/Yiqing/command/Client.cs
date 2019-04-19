@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 //character jump
+
 public class Client : MonoBehaviour {
 	// Use this for initialization
 	public Receiver avator;

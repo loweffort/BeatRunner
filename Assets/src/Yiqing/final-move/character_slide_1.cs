@@ -23,6 +23,32 @@ public class character_slide_1 : MonoBehaviour
 
     }
 
+     //singleton - Creational Patterns
+    private static character_slide_1 instance = null;
+    private static readonly object padlock = new object();
+    private character_slide_1() 
+    { 
+
+    }
+    //only use in instance of character controller 
+    private static character_slide_1 Instance
+    {
+        get {
+            if(instance != null)
+            {
+                return instance;
+            }
+            lock(padlock)
+            {
+            //If instance is not exist instantiate              
+                if(instance == null)
+                {
+                    instance = new character_slide_1();
+                }
+                return instance;
+            }
+        }
+    }
     //dynamic binding Virtual use to reset and initialize the check movement boolen value
     public virtual void Setup2()
     {
