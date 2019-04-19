@@ -23,7 +23,7 @@ public class SongAnalyzer : MonoBehaviour{
 
 //Run during Update, will detect spikes in bass range intensity, and then will signal the obstacle manager to create an obstacle
     //Takes in an AudioSource, and changes the private variables spectrum, prevspectrum, and prevprevspectrum during runtime
-    public void AnalyzeSong(UnityEngine.AudioSource musicSource) 
+    public void AnalyzeSong(UnityEngine.AudioSource musicSource, GameManager gameManager) 
     {
         //This sampling is chosen to best isolate each band out of the spectrum
         //Sample in mono channel to require less sampling
@@ -43,7 +43,7 @@ public class SongAnalyzer : MonoBehaviour{
         for(int j = (int)System.Math.Floor(50/frequencyGranularity); j < (int)System.Math.Ceiling(500/frequencyGranularity); j++){
             if(prevspectrum[j] - spectrum[j] > threshold && prevspectrum[j] -prevprevspectrum[j] > threshold){
                 //Send signal to obstacles
-                // gameManager.SendMessage("GenerateObstacle", 0.5f, SendMessageOptions.RequireReceiver);
+                gameManager.SendMessage("GenerateObstacle", 0.5f, SendMessageOptions.RequireReceiver);
                 Debug.Log("OBSTACLE");
                 break;
             }
