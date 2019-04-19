@@ -149,7 +149,7 @@ public class GameManagerBaseScene : GameManager
     }
 
     //Will send user to end game scene
-    private void WonGame()
+    public void WonGame()
     {
         RestartGame();
         SceneManager.LoadScene(sceneName: "Menu");
