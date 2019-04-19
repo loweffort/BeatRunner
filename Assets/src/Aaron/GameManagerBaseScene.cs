@@ -7,7 +7,7 @@ public class GameManagerBaseScene : GameManager
 {
     public GameObject masterBar;
     public GameObject masterWall;
-    public GameObject[] obstacles = new GameObject[256];
+    public GameObject[] obstacles;
     private ObstacleManager obstacleManager = new ObstacleManager();
     private int obstacleSpeed;
     private int obstacleCount;
@@ -56,6 +56,7 @@ public class GameManagerBaseScene : GameManager
     // Start is called before the first frame update
     void Start()
     {
+        obstacles = new GameObject[256];
         //Set initial state to allow for any set of obstacles
         currentState = new Open();
         //find initial time of game to keep obstacle spawns reasonably far apart (Time given is in seconds)
@@ -165,7 +166,7 @@ public class GameManagerBaseScene : GameManager
             obstacles[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
         }
         //if the furthest set of obstacles passes the character, despawn them
-        if (obstacles[0].transform.position.z < 0)
+        if (obstacleCount>0 && obstacles[0].transform.position.z < 0)
         {
             DestroyObstacles();
         }
