@@ -21,7 +21,7 @@ public class character_move : MonoBehaviour
         
     }
     
-    //singleton
+    //singleton - Creational Patterns
     private static character_move instance = null;
     private static readonly object padlock = new object();
     private character_move() 
@@ -48,7 +48,7 @@ public class character_move : MonoBehaviour
         }
     }
 
-    public void Setup()
+    public virtual void Setup()
     {
     	goingLeft = false;
     	goingRight = false;

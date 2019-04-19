@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//Sequences of Command objects can be assembled into composite (or macro) commands.
 public class CommandMove : Command {
     
     Vector3 trans;
