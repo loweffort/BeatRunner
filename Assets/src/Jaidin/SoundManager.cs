@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class SoundManager : MonoBehaviour
 {
     public GameManager gameManager;
-    public static SoundManager instance = null;
     private AudioSource musicSource;
     private AudioClip song;
     private float TimeElapsed = 0;
@@ -18,6 +17,28 @@ public class SoundManager : MonoBehaviour
     private float[] prevprevspectrum = new float [2048];
     //This can be modified to eliminate noise; 0.002f seems to be the most consistent
     private static float threshold = 0.002f;
+
+    //Singleton code
+    private static SoundManager soundManagerInstance = null;
+    private static readonly object padlock = new object();
+    private SoundManager() { }
+
+    public static SoundManager getInstance()
+    {
+            if(soundManagerInstance != null)
+            {
+                return soundManagerInstance;
+            }
+            lock(padlock)
+            {
+                if(soundManagerInstance == null)
+                {
+                    soundManagerInstance = new SoundManager();
+                }
+                return soundManagerInstance;
+            }
+    }
+
     void Start()
     {
         //Grabs both audio sources, the first for music, the second for the collision sound.

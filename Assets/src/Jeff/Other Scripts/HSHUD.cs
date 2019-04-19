@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HSHUD : SoundManager
+public class HSHUD : MonoBehaviour
 {
     // Player Score Variable
     public static int PlayerScore = 0;
@@ -17,7 +17,6 @@ public class HSHUD : SoundManager
     GameObject theMenu;
     // Will Change later depending on Naming conventions
     public GameManager theGameManager;
-
     private float timer = 0;
     // Start is called before the first frame update
     void Start()
