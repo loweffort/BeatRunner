@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Toolbar : MonoBehaviour
 {
-    public GameObject slideBar;
+    public GameObject Slider;
 
     void Start()
     {
-        slideBar.gameObject.SetActive(false);
+        Slider.gameObject.SetActive(false);
     }
 
     public void openToolbar()
     {
-        slideBar.SetActive(!slideBar.activeSelf);
+        Slider.SetActive(!Slider.activeSelf);
 
     }
 }
