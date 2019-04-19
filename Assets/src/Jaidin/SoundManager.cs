@@ -8,35 +8,33 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance = null;
     private AudioSource musicSource;
     private AudioClip song;
-    public float TimeElapsed = 0;
+    private float TimeElapsed = 0;
     public float SongDuration;
     private AudioClip collision;
+    //Requires to be public to be able to tell if it is playing outside of component
     public AudioSource collisionSource;
     private float[] spectrum = new float[2048];
     private float[] prevspectrum = new float[2048];
     private float[] prevprevspectrum = new float [2048];
-    //This can be modified to eliminate noise; 0 seems to be the most consistent
-    private static float threshold = 0.032f;
+    //This can be modified to eliminate noise; 0.002f seems to be the most consistent
+    private static float threshold = 0.002f;
     void Start()
     {
+        //Grabs both audio sources, the first for music, the second for the collision sound.
         AudioSource[] sources = GetComponents<AudioSource>();
         musicSource = sources[0];
         song = musicSource.clip;
-        //Also need the ability to choose music through menu (currently just has one song)
         SongDuration = song.length;
         collisionSource = sources[1];
         collision = collisionSource.clip;
         BeginMusic();
     }   
 
-    //spectrum should be used by the obstacle manager to generate obstacle positions. 
+    //Run during Update, will detect spikes in bass range intensity, and then will signal the obstacle manager to create an obstacle
     public void AnalyzeSong(AudioSource song) 
     {
-    /*
-    If I have time, do for multiple frequency sets, or expand so it only samples every few updates (maybe set to 15/sec?)
-    Also, play song 1/2 sec ahead of itself so sampling works correctly here
-    */        
         //This sampling is chosen to best isolate each band out of the spectrum
+        //Sample in mono channel to require less sampling
         musicSource.GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris); 
 
         //This is the width of each band (in Hz) in the spectrum taken above
@@ -44,15 +42,15 @@ public class SoundManager : MonoBehaviour
 
         for (int i = 1; i < spectrum.Length - 1; i++)
         { 
-            //Square each, to eliminate some less prevalent frequencies (we only want to focus on the primary frequency in each)
-            // spectrum[i] = spectrum[i] *spectrum[i];
+            //Square each, to eliminate some less prevalent frequencies (this helps clear up some noise)
+            spectrum[i] = spectrum[i] *spectrum[i];
         }
             //Compare only in the bass - midrange
         for(int j = (int)System.Math.Floor(50/frequencyGranularity); j < (int)System.Math.Ceiling(500/frequencyGranularity); j++){
             if(prevspectrum[j] - spectrum[j] > threshold && prevspectrum[j] -prevprevspectrum[j] > threshold){
-                //SEND SIGNAL TO OBSTACLES
+                //Send signal to obstacles
+                gameManager.SendMessage("GenerateObstacle", 0.5f, SendMessageOptions.RequireReceiver);
                 Debug.Log("OBSTACLE");
-
                 break;
             }
         }
