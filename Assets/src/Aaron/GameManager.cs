@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject masterBar;
     public GameObject masterWall;
     public GameObject[] obstacles = new GameObject[3];
-
+    private ObstacleManager obstacleManager = new ObstacleManager();
+    ObstacleManagerDecorator obstacleManagerDecorator;
     //begin singleton code
     private static GameManager gameManagerInstance = null;
     private static readonly object padlock = new object();
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        obstacleManagerDecorator = ObstacleManagerDecorator.getInstance(obstacleManager);
+        obstacleManagerDecorator.Operation();
         SetObstacles();
         playerCharacter.name = "playerCharacter";
     }
