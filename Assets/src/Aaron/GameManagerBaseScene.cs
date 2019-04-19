@@ -157,7 +157,7 @@ public class GameManagerBaseScene : GameManager
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //move all obstacles forward by set difficulty speed
         for (int i = 0; i < obstacleCount; i++)
