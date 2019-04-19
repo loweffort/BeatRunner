@@ -52,6 +52,7 @@ public class SoundManager : MonoBehaviour
     }   
 
     //Run during Update, will detect spikes in bass range intensity, and then will signal the obstacle manager to create an obstacle
+    //Takes in an AudioSource, and changes the private variables spectrum, prevspectrum, and prevprevspectrum during runtime
     public void AnalyzeSong(AudioSource song) 
     {
         //This sampling is chosen to best isolate each band out of the spectrum
@@ -59,6 +60,7 @@ public class SoundManager : MonoBehaviour
         musicSource.GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris); 
 
         //This is the width of each band (in Hz) in the spectrum taken above
+        //Divided by 2f as the sampling range of the FFT is half that of the total spectrum range
         float frequencyGranularity = (float)AudioSettings.outputSampleRate /2f /spectrum.Length;         
 
         for (int i = 1; i < spectrum.Length - 1; i++)
@@ -105,9 +107,7 @@ public class SoundManager : MonoBehaviour
     public void SoundOnCollision(){
        collisionSource.PlayOneShot(collision);
     }
-    // Update is called once per frame
 
-    /* MOVE TO OTHER CLASS, BUILD ADAPTER BETWEEN */
     void Update()
     {
         

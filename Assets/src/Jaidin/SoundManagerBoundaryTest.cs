@@ -9,7 +9,10 @@ public class SoundManagerBoundaryTest : MonoBehaviour
     bool testFail = false;
     bool testPass = false;
     int numberofSounds = 0;
-    void Start(){}
+    void Start(){
+        soundManager = SoundManager.getInstance();
+
+    }
 
     void OnGUI()
     {

@@ -9,7 +9,10 @@ public class SoundManagerCollisionTest : MonoBehaviour
     bool testFail = false;
     bool testPass = false;
     int soundFrequency = 1;
-    void Start(){}
+    void Start(){
+        soundManager = SoundManager.getInstance();
+
+    }
 
     void OnGUI()
     {
