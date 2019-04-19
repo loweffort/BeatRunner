@@ -938,26 +938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1040591978}
     m_Modifications:
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Crab
-      objectReference: {fileID: 0}
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Cube3
-      objectReference: {fileID: 0}
-    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1013,6 +993,26 @@ PrefabInstance:
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalScale.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Cube3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2362,18 +2362,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1136319954}
     m_Modifications:
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: cangrejo
-      objectReference: {fileID: 0}
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -2429,6 +2417,18 @@ PrefabInstance:
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: cangrejo
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2686,22 +2686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1622075025}
     m_Modifications:
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Ship
-      objectReference: {fileID: 0}
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Cube1
-      objectReference: {fileID: 0}
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2757,6 +2741,22 @@ PrefabInstance:
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Cube1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3357,6 +3357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theGameManager: {fileID: 521189591}
+  playerCharacter: {fileID: 0}
 --- !u!114 &1136319956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,22 +3633,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1677607364}
     m_Modifications:
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Ship
-      objectReference: {fileID: 0}
-    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
-      propertyPath: m_Name
-      value: Cube2
-      objectReference: {fileID: 0}
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3703,6 +3688,22 @@ PrefabInstance:
     - target: {fileID: 400092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
+      propertyPath: m_Name
+      value: Cube2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f172956baa7a2944c9aa8189718ee1c1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4684,7 +4685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 521189591}
-  TimeElapsed: 0
   SongDuration: 0
   collisionSource: {fileID: 2070647717}
   ActiveButton: 1
@@ -4741,9 +4741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 521189591}
-  TimeElapsed: 0
   SongDuration: 100
-  collisionSource: {fileID: 0}
+  collisionSource: {fileID: 2070647718}
 --- !u!4 &2070647716
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 //    int Multiplier{ get; }
 //}
 
-public class HUD : SoundManager
+public class HUD : MonoBehaviour
 {
     //  Player Score Variable also this is Late Binding "Dyanmic"
     //  these dynamic objects get detected and converted into System.Int32 

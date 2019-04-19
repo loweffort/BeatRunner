@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HUDTest : SoundManager
+public class HUDTest : MonoBehaviour
 {
     // Player Score Variable
     public static int PlayerScore = 0;

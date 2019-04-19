@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundManager = SoundManager.getInstance();
         obstacleManagerDecorator = ObstacleManagerDecorator.getInstance(obstacleManager);
         obstacleManagerDecorator.Operation();
         SetObstacles();
@@ -81,6 +82,7 @@ public class GameManager : MonoBehaviour
 
     private void RestartGame()
     {
+        soundManager.SoundOnCollision();
         for (int i = 0; i < 3; i++)
         {
             Debug.Log("resetting obstacles");
