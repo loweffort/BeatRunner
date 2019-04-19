@@ -6,8 +6,6 @@ public class SoundManagerCollisionTest : MonoBehaviour
 {
     public SoundManager soundManager;
     public HUD hud;
-    // public BarObstacle barObstacle;
-    // public PlayerCharacter playerCharacter;
     bool testFail = false;
     bool testPass = false;
     int soundFrequency = 1;

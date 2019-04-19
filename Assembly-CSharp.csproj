@@ -73,7 +73,9 @@
      <Compile Include="Assets\src\Irven\StartHidden.cs" />
      <Compile Include="Assets\src\Irven\Toolbar.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManager.cs" />
+     <Compile Include="Assets\src\Jaidin\SoundManagerBoundaryButton.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManagerBoundaryTest.cs" />
+     <Compile Include="Assets\src\Jaidin\SoundManagerCollisionButton.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManagerCollisionTest.cs" />
      <Compile Include="Assets\src\Jeff\Other Scripts\AFactory.cs" />
      <Compile Include="Assets\src\Jeff\Other Scripts\BackgroundClutterA.cs" />

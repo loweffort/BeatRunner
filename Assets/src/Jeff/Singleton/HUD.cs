@@ -113,7 +113,7 @@ public class HUD : SoundManager
             //GUI.Label(new Rect(Screen.width - 90, 20, 100, 15), "Menu Not Working Yet");
             PlayerScore = 0;
             // This will send the RestartGame function to the Game Manager, I forgot who controls this.
-            theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
+            //theGameManager.SendMessage("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
             SceneManager.LoadScene(sceneName: "Menu");
         }
 
