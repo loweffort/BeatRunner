@@ -87,7 +87,7 @@ public class SoundManager : SongAnalyzer
 
     void Update()
     {
-        AnalyzeSong(musicSource);
+        AnalyzeSong(musicSource, gameManager);
         TimeElapsed += Time.deltaTime;
 
         if(TimeElapsed >= SongDuration) 
