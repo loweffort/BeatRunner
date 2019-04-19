@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         soundManager.BeginMusic();
     }
 
-    private void WonGame()
+    public void WonGame()
     {
         RestartGame();
         SceneManager.LoadScene(sceneName: "Menu");

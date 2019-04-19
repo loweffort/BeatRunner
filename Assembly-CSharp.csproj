@@ -72,6 +72,7 @@
      <Compile Include="Assets\src\Irven\StartButton.cs" />
      <Compile Include="Assets\src\Irven\StartHidden.cs" />
      <Compile Include="Assets\src\Irven\Toolbar.cs" />
+     <Compile Include="Assets\src\Jaidin\SongAnalyzer.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManager.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManagerBoundaryButton.cs" />
      <Compile Include="Assets\src\Jaidin\SoundManagerBoundaryTest.cs" />
@@ -255,7 +256,7 @@
      <Compile Include="Assets\src\Yiqing\YM-stress-test\YM_test1.cs" />
      <Compile Include="Assets\src\Yiqing\YM-test\character_jump_1.cs" />
      <Compile Include="Assets\src\Yiqing\YM-test\character_move_1.cs" />
-     <Compile Include="Assets\src\Yiqing\YM-test\YM_test2.cs" />
+     <Compile Include="Assets\src\Yiqing\YM-test\YM_other_test2.cs" />
      <Compile Include="Assets\TestButtonMenu.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
