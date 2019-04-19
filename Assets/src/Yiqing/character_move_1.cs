@@ -79,20 +79,20 @@ public class character_move_1 : MonoBehaviour
         {
             goingLeft = false;
         }
-       /* if (Input.GetKeyUp(jump) && transform.position.y >5.4 )
+        if (Input.GetKeyUp(jump) && transform.position.y >5.4 )
         {
             initJump = true;
-        }*/
+        }
     }
         // Update is called once per frame
         void FixedUpdate()
         { 
-        if (goingLeft)
+        if (goingLeft && transform.position.x > -10)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(-60, GetComponent<Rigidbody>().velocity.y, 0); 
             // Debug.Log("Left movement sucess");
         }
-        else if(goingRight)
+        else if(goingRight && transform.position.x < 50)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(60, GetComponent<Rigidbody>().velocity.y, 0);
             // Debug.Log("Right movement sucess");
@@ -102,13 +102,13 @@ public class character_move_1 : MonoBehaviour
             // not move without input or hit boundary
             GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
         }
-        /*if (initJump) 
+        if (initJump) 
         {
         	//jump height 50
             GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);
             Debug.Log("Jump sucess");
             initJump = false;
-        }*/
+        }
 
         //add force to move
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0,0,0);
