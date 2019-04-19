@@ -79,7 +79,7 @@ public class character_move_1 : MonoBehaviour
         {
             goingLeft = false;
         }
-        if (Input.GetKeyUp(jump) && transform.position.y >5.4 )
+        if (Input.GetKeyUp(jump))
         {
             initJump = true;
         }
@@ -102,7 +102,7 @@ public class character_move_1 : MonoBehaviour
             // not move without input or hit boundary
             GetComponent<Rigidbody>().velocity = new Vector3(0, GetComponent<Rigidbody>().velocity.y, 0);
         }
-        if (initJump) 
+        if (initJump && transform.position.y < 6 ) 
         {
         	//jump height 50
             GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, 50, 0);
