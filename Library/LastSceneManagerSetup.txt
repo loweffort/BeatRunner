@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/src/Irven/GameWonMenu.unity
+- path: Assets/src/Irven/GameOverScreen.unity
   isLoaded: 1
   isActive: 1
