@@ -7,7 +7,9 @@ public class ButtionClass : MonoBehaviour
     private UnityEngine.AudioSource buttonSound;
     private UnityEngine.AudioClip sound;
 
-    //Alow to overide base class
+    // Alow to overide base class 
+    // Virtual: use extended class version
+    // abstract: extended must have a new version
     public virtual void switchScene()
     {
         Debug.Log("Switch scene");
