@@ -329,6 +329,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\src\Lennin\A File.txt" />
+    <None Include="Assets\src\Irven\prefab\IP-Readme.txt" />
     <None Include="Assets\prefab\TestDoc.txt" />
     <None Include="Assets\tst\testme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
