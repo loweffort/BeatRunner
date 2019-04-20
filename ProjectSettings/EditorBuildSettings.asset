@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/src/Aaron/CollisionManagementTest.unity
     guid: d1e20bc8380e1db4480194f16debad8a
+  - enabled: 1
+    path: Assets/src/Irven/UIBoundaryTest.unity
+    guid: 8db05a8b3176043b2bfd6a2e177245a0
   m_configObjects: {}
