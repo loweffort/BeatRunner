@@ -84,10 +84,12 @@
     <Compile Include="Assets\src\Aaron\TestButton.cs" />
     <Compile Include="Assets\src\Aaron\UpperGameManagerTest.cs" />
     <Compile Include="Assets\src\Aaron\VelocityOverflowButton.cs" />
+    <Compile Include="Assets\src\Irven\ButtionClass.cs" />
     <Compile Include="Assets\src\Irven\ClosePanel.cs" />
     <Compile Include="Assets\src\Irven\CreditBackground.cs" />
     <Compile Include="Assets\src\Irven\DiplayInstruction.cs" />
     <Compile Include="Assets\src\Irven\OptionButton.cs" />
+    <Compile Include="Assets\src\Irven\OptionButtonClass.cs" />
     <Compile Include="Assets\src\Irven\ReplayLevel.cs" />
     <Compile Include="Assets\src\Irven\StartButton.cs" />
     <Compile Include="Assets\src\Irven\StartHidden.cs" />
