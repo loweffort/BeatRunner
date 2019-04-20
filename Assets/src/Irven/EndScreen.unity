@@ -713,6 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c411e18e7e14ccd852b432b98a8126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitySource: {fileID: 3103140458104991462, guid: e857ba4749ef64edd860123b303aa66a,
+    type: 3}
 --- !u!114 &773294513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +770,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 773294512}
-        m_MethodName: startGame
+        m_MethodName: switchScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

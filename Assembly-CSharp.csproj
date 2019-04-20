@@ -98,6 +98,7 @@
     <Compile Include="Assets\src\Irven\Toolbar.cs" />
     <Compile Include="Assets\src\Irven\UIBoundaryTestCase.cs" />
     <Compile Include="Assets\src\Irven\UIStressTestLoader.cs" />
+    <Compile Include="Assets\src\Irven\UIStressTestScript.cs" />
     <Compile Include="Assets\src\Irven\VolumeControl.cs" />
     <Compile Include="Assets\src\Jaidin\SongAnalyzer.cs" />
     <Compile Include="Assets\src\Jaidin\SoundManager.cs" />

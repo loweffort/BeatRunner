@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{E75697AB-FBDE-3195-3EE2-72A9A1AFF4C6}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/src/Irven/UIStressTestLoader.cs">
     <Files>
-      <File FileName="Assets/src/Irven/UIStressTestLoader.cs" Line="11" Column="33" />
+      <File FileName="Assets/src/Irven/UIStressTestLoader.cs" Line="9" Column="1" />
+      <File FileName="Assets/src/Irven/UIStressTestScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
