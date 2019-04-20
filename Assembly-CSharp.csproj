@@ -84,6 +84,7 @@
     <Compile Include="Assets\src\Aaron\TestButton.cs" />
     <Compile Include="Assets\src\Aaron\UpperGameManagerTest.cs" />
     <Compile Include="Assets\src\Aaron\VelocityOverflowButton.cs" />
+    <Compile Include="Assets\src\Irven\BoundaryTest.cs" />
     <Compile Include="Assets\src\Irven\ButtionClass.cs" />
     <Compile Include="Assets\src\Irven\ClosePanel.cs" />
     <Compile Include="Assets\src\Irven\CreditBackground.cs" />
