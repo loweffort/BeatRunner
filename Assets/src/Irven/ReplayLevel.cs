@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+// Will be acessing Button Class
+// For dynamic binding
 public class ReplayLevel : ButtionClass
 {
     public UnityEngine.AudioSource unitySource;
     //public UnityEngine.AudioClip unitySound;
+    //Dynamic binding
     public override void switchScene()
     {
         setAudioSource(unitySource);

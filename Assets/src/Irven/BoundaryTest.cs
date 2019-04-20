@@ -52,6 +52,7 @@ public class BoundaryTest : MonoBehaviour
              
         }
 
+        // Restor value to 1F;
         song.volume = 1.0F;
         m_MySliderValue = song.volume;
         m_MySliderValue = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), m_MySliderValue, 0.0F, 1.0F);

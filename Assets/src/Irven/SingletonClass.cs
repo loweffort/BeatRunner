@@ -5,14 +5,19 @@ using System;
 
 public class SingletonClass : MonoBehaviour
 {
-
+    // Create a single instance of this class
+    // Can only be called once, can be access from other objects
     public static SingletonClass instance;
+    //Will be overwritten by "singleton call"
     public string currentClass = "CS-395";
+
+    //Initializing instance
     void Awake()
     {
         instance = this;
     }
 
+    // Add somme functionality
     public void addClassInformation(string updatedName)
     {
         currentClass = updatedName;

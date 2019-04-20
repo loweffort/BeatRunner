@@ -6,6 +6,8 @@ public class ButtionClass : MonoBehaviour
 {
     private UnityEngine.AudioSource buttonSound;
     private UnityEngine.AudioClip sound;
+
+    //Alow to overide base class
     public virtual void switchScene()
     {
         Debug.Log("Switch scene");
@@ -20,6 +22,7 @@ public class ButtionClass : MonoBehaviour
 
     }
 
+    // Attach sound to audiosource
     public void setAudioSource(AudioSource givenSource)
     {
         Debug.Log("setting sound");
