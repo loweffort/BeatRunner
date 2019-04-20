@@ -25,8 +25,8 @@ public class BoundaryTest : MonoBehaviour
 
             
            
-        //Create a horizontal Slider that controls volume levels. Its highest value is 2 and lowest is 0
-        m_MySliderValue = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), m_MySliderValue, 0.0F, 2.0F);
+       
+        //m_MySliderValue = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), m_MySliderValue, 0.0F, 2.0F);
         //Makes the volume of the Audio match the Slider value
         song.volume = m_MySliderValue ;
  
@@ -34,10 +34,11 @@ public class BoundaryTest : MonoBehaviour
         while(testPass != testFailUpper) 
         {
           
-                song.volume = m_MySliderValue + value;
-                value = song.volume + value;
-                Debug.Log("Current Volume test Status: Pass ");
-                m_MySliderValue = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), m_MySliderValue, 0.0F, 2.0F);
+            song.volume = m_MySliderValue + value;
+            value = song.volume + value;
+            //Create a horizontal Slider that controls volume levels. Its highest value is 2 and lowest is 0
+            Debug.Log("Current Volume test Status: Pass "); 
+            m_MySliderValue = GUI.HorizontalSlider(new Rect(25, 25, 200, 60), m_MySliderValue, 0.0F, 2.0F);
 
                 // Will keep bound to .9F, unless game will crash
                 if (song.volume > .9F)

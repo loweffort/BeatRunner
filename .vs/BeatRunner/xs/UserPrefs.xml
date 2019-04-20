@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{E75697AB-FBDE-3195-3EE2-72A9A1AFF4C6}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/src/Irven/UIStressTestLoader.cs">
+    <Files>
+      <File FileName="Assets/src/Irven/UIStressTestLoader.cs" Line="11" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
