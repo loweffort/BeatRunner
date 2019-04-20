@@ -88,9 +88,12 @@
     <Compile Include="Assets\src\Irven\ClosePanel.cs" />
     <Compile Include="Assets\src\Irven\CreditBackground.cs" />
     <Compile Include="Assets\src\Irven\DiplayInstruction.cs" />
+    <Compile Include="Assets\src\Irven\EndGame.cs" />
     <Compile Include="Assets\src\Irven\OptionButton.cs" />
     <Compile Include="Assets\src\Irven\OptionButtonClass.cs" />
     <Compile Include="Assets\src\Irven\ReplayLevel.cs" />
+    <Compile Include="Assets\src\Irven\singletonCall.cs" />
+    <Compile Include="Assets\src\Irven\SingletonClass.cs" />
     <Compile Include="Assets\src\Irven\StartButton.cs" />
     <Compile Include="Assets\src\Irven\StartHidden.cs" />
     <Compile Include="Assets\src\Irven\Toolbar.cs" />
@@ -328,6 +331,7 @@
     <None Include="Assets\tst\testme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\src\Yiqing\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
