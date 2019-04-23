@@ -9,7 +9,8 @@ public class TrackMover : MonoBehaviour
     // Attach these in the Inspector window
     private int m_XValue = 0;
     private int m_YValue = 0;
-    private int m_ZValue = 450;
+    // To reverse direction start m_ZValue at 450
+    private int m_ZValue = -250;
 
     // Use this for initialization
     void Start()
@@ -27,11 +28,11 @@ public class TrackMover : MonoBehaviour
 
         // Change the position depending on the vector m_ZValue beleow is speed, Bigger Negative number means faster
         transform.position = m_NewPosition;
-        if (m_ZValue >= 0)
-            m_ZValue = m_ZValue -15;
+        if (m_ZValue <= 0) // Switch to >= for the reverse direction.
+            m_ZValue = m_ZValue +10; // This Is the Speed, for reverse do -15
         else
-            m_ZValue = 450;
-        
+            m_ZValue = -250; // To reverse direction start m_ZValue at 450
+
     }
 
     //public float speed = 5f;
