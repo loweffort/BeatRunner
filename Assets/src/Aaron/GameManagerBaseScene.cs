@@ -69,6 +69,10 @@ public class GameManagerBaseScene : GameManager
         playerCharacter.name = "playerCharacter";
         //find speed based on selected difficulty
         obstacleSpeed = PlayerPrefs.GetInt("ObstacleSpeed");
+        if(obstacleSpeed == 0)
+        {
+            obstacleSpeed = 300;
+        }
     }
 
     private void GenerateObstacle()
